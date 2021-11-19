@@ -1,9 +1,13 @@
-var gulp = require('gulp');
-// Requires the gulp-sass plugin
-var sass = require('gulp-sass');
+const gulp = require('gulp');
+const sass = require('gulp-sass')(require('sass'));
 
-gulp.task('sass', function(){
-    return gulp.src('source-files')
-        .pipe(sass())    // ici on utilise gulp-sass
-        .pipe(gulp.dest('destination'))
-});
+function buildStyles() {
+  return gulp.src('./scss/main.scss')
+    .pipe(sass.sync({outputStyle: 'compressed'}).on('error', sass.logError))
+    .pipe(gulp.dest('./css'));
+};
+
+exports.buildStyles = buildStyles;
+exports.watch = function () {
+  gulp.watch('./scss/main.scss', ['sass']);
+};

@@ -1,0 +1,19 @@
+// Colors
+@import "colors";
+// Fonts
+@import "fonts";
+
+body {
+    color: $bleu;
+}
+
+
+
+
+
+
+
+// Import templates & composants
+@import "header";
+@import "footer";
+@import "responsive";
