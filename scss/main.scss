@@ -1,12 +1,13 @@
-// Colors
+// Couleurs
 @import "colors";
-// Fonts
+// Polices
 @import "fonts";
 
-body {
-    color: red;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-
 
 
 // Import templates & composants
