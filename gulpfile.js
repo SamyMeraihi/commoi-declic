@@ -12,3 +12,5 @@ gulp.task('buildStyles', function () {
 gulp.task('watch', function () {
   gulp.watch('./scss/main.scss', gulp.parallel('buildStyles'));
 })
+
+gulp.task('default', ['watch']);
