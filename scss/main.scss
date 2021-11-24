@@ -4,10 +4,41 @@
 @import "fonts";
 
 * {
+    box-sizing: border-box;
+    font-family: "open", sans-serif ;
+}
+body {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    font-size: 0.8rem;
 }
+h1 {
+    font-size: 2rem;
+}
+h2 {
+    font-size: 1.5rem;
+}
+a {
+    text-decoration: none;
+    color: unset;
+    &.cta {
+        padding: 15px 50px;
+        border: 1px solid $gris;
+        border-radius: 10px;
+    }
+}
+.d-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.flex-column {
+    flex-direction: column;
+}
+.space-between {
+    justify-content: space-between;
+}
+
 
 
 // Import templates & composants
