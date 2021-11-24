@@ -6,9 +6,11 @@ header {
         height: 90px;
         padding: 0 80px;
         position: fixed;
+        z-index: 99;
         border: 1px solid $gris;
         justify-content: space-between;
         align-items: center;
+        background-color: $gris-light;
         .demo-logo {
             padding: 10px 40px;
             border: 1px solid $gris;
@@ -17,7 +19,6 @@ header {
         ul {
             display: flex;
             li {
-                list-style-type: none;
                 margin-right: 40px;
                 a {
                     &:hover {
