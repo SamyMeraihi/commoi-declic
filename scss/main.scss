@@ -17,7 +17,9 @@ body {
     background-color: $creme;
     margin: 0;
     padding: 0;
+    font-size: 1.2rem;
     font-family: 'Work Sans', sans-serif;
+    font-weight: 200;
     color: $noir;
 }
 h1, h2 {
@@ -25,7 +27,11 @@ h1, h2 {
     color: $violet;
 }
 h1 {
+    font-size: 2.5rem;
     text-align: center;
+}
+h2 {
+    font-size: 1.7rem;
 }
 
 ul {
@@ -72,6 +78,7 @@ a {
 //styles du bloc main
 main {
     padding: 100px 0;
+    background-color: $blanc;
     .main-item {
         &:not(:last-child) {
             padding-bottom: 50px;
@@ -143,8 +150,14 @@ main {
                     > * {
                         text-align: center;
                     }
-                    h3 {
+                    .sous-titre {
                         margin-top: 0;
+                        font-size: 1.5rem;
+                        font-weight: 100;
+                    }
+                    p {
+                        margin-top: 40px;
+                        font-style: italic;
                     }
                 }
             }
@@ -185,9 +198,11 @@ main {
                 margin: 80px 0;
             }
             .formulaire {
-                padding: 0 100px;
-                border: 2px solid $violet;
-                box-shadow: 10px 10px 10px $mauve;
+                padding: 0 80px;
+                img {
+                    max-width: 200px;
+                    margin-bottom: 80px;
+                }
                 .demo-illustration {
                     width: 100%;
                     height: 150px;
@@ -202,13 +217,14 @@ main {
                 form {
                     width: 100%;
                     input {
-                        height: 50px;
+                        height: 80px;
                         margin: 0;
                         outline: none;
-                        border: 1px solid $noir;
+                        border: 1px solid $violet;
+                        font-size: 1.17rem;
                         &#email {
                             padding-left: 50px;
-                            border-radius: 25px 0 0 25px;
+                            border-radius: 50px 0 0 50px;
                             flex: 1;
                             &::-webkit-input-placeholder {
                                 font-style: italic;
@@ -216,12 +232,13 @@ main {
                             }
                         }
                         &#newsletter-submit {
-                            width: 150px;
+                            width: 200px;
                             padding: 15px 30px;
-                            background-color: $mauve;
-                            border-radius: 0 25px 25px 0;
+                            background-color: $violet;
+                            border-radius: 0 50px 50px 0;
                             border-left: none;
                             font-weight: bold;
+                            color: $canari;
                         }
                     }
                 }
