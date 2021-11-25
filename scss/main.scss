@@ -3,6 +3,7 @@
 // Polices
 @import "fonts";
 
+// styles généraux
 * {
     box-sizing: border-box;
     font-family: "open", sans-serif ;
@@ -10,16 +11,13 @@
 body {
     margin: 0;
     padding: 0;
-    font-size: 0.8rem;
+    font-size: 1.2rem;
 }
 h1 {
-    font-size: 2rem;
+    font-size: 4rem;
 }
 h2 {
-    font-size: 1.5rem;
-}
-h3 {
-    font-size: 1.17rem;
+    font-size: 2rem;
 }
 ul {
     padding: 0;
@@ -31,9 +29,9 @@ a {
     text-decoration: none;
     color: unset;
     &.cta {
-        padding: 15px 50px;
+        padding: 20px 50px;
         border: 1px solid $gris;
-        border-radius: 10px;
+        border-radius: 20px;
     }
 }
 .d-flex {
@@ -47,8 +45,174 @@ a {
 .space-between {
     justify-content: space-between;
 }
+.demo-illustration {
+    margin-bottom: 100px;
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    opacity: 0.1;
+}
 
+//styles du bloc main
+main {
+    padding: 100px 0;
+    .main-item {
+        &:not(:last-child) {
+            padding-bottom: 50px;
+        }
+        &.first {
+            padding-bottom: 400px;
+            > section {
+                &:not(:last-of-type) {
+                    padding-bottom: 100px;
+                }
+                &.avantages {
+                    .demo-illustration {
+                        width: 400px;
+                        height: 350px;
+                        margin: 0 40px 0 0;
+                        opacity: 1;
+                        border: 1px solid $gris;
+                        border-radius: 50px;
+                        span {
+                            opacity: 0.5;
+                        }
+                    }
+                    article {
+                        width: 30%;
+                    }
+                }
+                &.valeurs {
+                    h2 {
+                        margin: 0 0 60px 0;
+                    }
+                    .valeurs-cartes {
+                        section {
+                            width: 250px;
+                            height: 250px;
+                            padding: 0 25px;
+                            border: 2px solid $gris;
+                            border-radius: 40px;
+                            box-shadow: 2px 2px 10px $gris-light;
+                            &:not(:last-child) {
+                                margin-right: 30px;
+                            }
+                            .demo-rond {
+                                width: 60px;
+                                height: 60px;
+                                border: 2px solid $gris;
+                                border-radius: 50%;
+                            }
+                            h3 {
+                                margin: 15px 0;
+                            }
+                            .separateur {
+                                width: 20px;
+                                height: 1px;
+                                margin: 10px 0;
+                                background-color: $gris;
+                            }
+                            p {
+                                margin: 0;
+                                padding: 0 20px;
+                                text-align: center;
+                                font-size: 0.9rem;
+                            }
+                        }
+                    }
+                }
+                &.etablissement {
+                    max-width: 720px;
+                    margin: auto;
+                    > * {
+                        text-align: center;
+                    }
+                    h3 {
+                        margin-top: 0;
+                    }
+                }
+            }
+            .triangles {
+                height: 0;
+                div {
+                    height: 500px;
+                    width : 50%;
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                }
+                .t1 {
+                    background-image: url("../img/triangle-1.png");
+                    background-position: left;
+                }
+                .t2 {
+                    background-image: url("../img/triangle-2.png");
+                    background-position: right;
+                }
+            }
+        }
+        &.second {
+            max-width: 720px;
+            margin: auto;
+            > div {
+                width: 100%;
+                height: 407px;
+                border-radius: 60px;
 
+            }
+            .demo-video {
+                position: relative;
+                border: 1px solid $gris-moyen;
+                text-align: center;
+                text-transform: uppercase;
+            }
+            h2 {
+                margin: 80px 0;
+            }
+            .formulaire {
+                padding: 0 100px;
+                border: 2px solid $gris-moyen;
+                box-shadow: 10px 10px 10px $gris-light;
+                .demo-illustration {
+                    width: 100%;
+                    height: 150px;
+                    margin: 0 0 40px 0;
+                    border-radius: 25px;
+                    opacity: 1;
+                    background-color: $gris-light;
+                    span {
+                        opacity: 0.2;
+                    }
+                }
+                form {
+                    width: 100%;
+                    input {
+                        height: 50px;
+                        margin: 0;
+                        outline: none;
+                        border: 1px solid $gris;
+                        &#email {
+                            padding-left: 50px;
+                            border-radius: 25px 0 0 25px;
+                            flex: 1;
+                            &::-webkit-input-placeholder {
+                                font-style: italic;
+                                opacity: 0.5;
+                            }
+                        }
+                        &#newsletter-submit {
+                            width: 150px;
+                            padding: 15px 30px;
+                            background-color: $gris-light;
+                            border-radius: 0 25px 25px 0;
+                            border-left: none;
+                            font-weight: bold;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
 
 // Import templates & composants
 @import "header";
