@@ -14,7 +14,7 @@ html {
 body {
     height: 100%;
     overflow: auto;
-    background-color: $creme;
+    position: relative;
     margin: 0;
     padding: 0;
     font-family: 'Work Sans', sans-serif;
@@ -31,6 +31,11 @@ h1 {
 }
 h2 {
     font-size: 1.7rem;
+}
+.sous-titre {
+    margin-top: 0;
+    font-size: 1.5rem;
+    font-weight: 200;
 }
 
 ul {
@@ -77,40 +82,57 @@ a {
 
 //styles du bloc main
 main {
-    padding: 100px 0;
-    background-color: $blanc;
+    position: relative;
+    z-index: 2;
+    padding: 0 0 100px 0;
     .main-item {
         &:not(:last-child) {
             padding-bottom: 50px;
         }
         &.first {
             padding-bottom: 300px;
+            
             > section {
                 &:not(:last-of-type) {
                     padding-bottom: 80px;
                 }
                 &.avantages {
-
-                    background-color: $violet;
-
-                    .demo-illustration {
-                        width: 400px;
-                        height: 350px;
+                    position: relative;
+                    &:before {
+                        content: "";
+                        display: block;
+                        width: 100%;
+                        height: 500px;
+                        position: absolute;
+                        z-index: -1;
+                        top:-299px;
+                        background-image: url("../img/forme-module-3-horizontale.png");
+                        background-size: cover;
+                    }
+                    &:after {
+                        content: "";
+                        display: block;
+                        width: 100%;
+                        height: 500px;
+                        position: absolute;
+                        z-index: -1;
+                        bottom: -180px;
+                        background-image: url("../img/forme-module-3-horizontale.png");
+                        background-size: cover;
+                        background-position: bottom;
+                    }
+                    img {
+                        width: 450px;
+                        height: 400px;
                         margin: 0 40px 0 0;
-                        opacity: 1;
-                        border: 1px solid $noir;
                         border-radius: 50px;
-                        span {
-                            opacity: 0.5;
-                        }
+                        object-fit: cover;
                     }
                     article {
                         width: 30%;
+                        color: $blanc;
                         h2 {
                             color: $canari;
-                        }
-                        h3, p {
-                            color: $blanc;
                         }
                     }
                 }
@@ -164,33 +186,11 @@ main {
                     > * {
                         text-align: center;
                     }
-                    .sous-titre {
-                        margin-top: 0;
-                        font-size: 1.5rem;
-                        font-weight: 200;
-                    }
                     p {
                         margin: 40px 0 30px 0;
                         font-style: italic;
                         font-size: 1rem;
                     }
-                }
-            }
-            .triangles {
-                height: 0;
-                div {
-                    height: 500px;
-                    width : 50%;
-                    background-repeat: no-repeat;
-                    background-size: contain;
-                }
-                .t1 {
-                    background-image: url("../img/triangle-1.png");
-                    background-position: left;
-                }
-                .t2 {
-                    background-image: url("../img/triangle-2.png");
-                    background-position: right;
                 }
             }
         }
@@ -200,14 +200,13 @@ main {
             > div {
                 width: 100%;
                 height: 407px;
-                border-radius: 60px;
-
             }
             .demo-video {
                 position: relative;
-                border: 1px solid $violet;
                 text-align: center;
                 text-transform: uppercase;
+                background-image: url("../img/video-preview-maquette-fullvisuel.png");
+                background-size: cover; 
             }
             h2 {
                 margin: 80px 0;
@@ -217,17 +216,6 @@ main {
                 img {
                     max-width: 200px;
                     margin-bottom: 80px;
-                }
-                .demo-illustration {
-                    width: 100%;
-                    height: 150px;
-                    margin: 0 0 40px 0;
-                    border-radius: 25px;
-                    opacity: 1;
-                    background-color: $mauve;
-                    span {
-                        opacity: 0.2;
-                    }
                 }
                 form {
                     width: 100%;

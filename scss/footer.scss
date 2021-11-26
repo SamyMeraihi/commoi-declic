@@ -1,16 +1,30 @@
 footer {
+    height: 400px;
+    margin-top: 50px;
     background-color: $violet;
-    color: white;
+    position: relative;
+    z-index: 3;
+    color: $blanc;
+    justify-content: flex-end;
+    &:before {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 200px;
+        position: absolute;
+        top:-199px;
+        background-image: url("../img/forme-module-3-horizontale-footer.png");
+        background-size: cover;
+    }
     .footer-content {
         max-width: 720px;
-        height: 400px;
         margin: auto;
-        padding-top: 80px;
         align-items: flex-start;
         justify-content: space-between;
         section {
             width: 38%;
             h2 {
+                margin-top: 0;
                 color: $canari;
                 font-size: 1.5rem;
             }
@@ -39,7 +53,8 @@ footer {
         }
     }
     .copyright {
-        margin: auto;
+        width: 100%;
+        margin: 0;
         padding: 20px 0;
         border-top: 1px solid $noir;
         text-transform: uppercase;
