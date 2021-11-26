@@ -83,6 +83,9 @@ main {
                     padding-bottom: 100px;
                 }
                 &.avantages {
+
+                    background-color: violet ;
+
                     .demo-illustration {
                         width: 400px;
                         height: 350px;
@@ -96,6 +99,12 @@ main {
                     }
                     article {
                         width: 30%;
+                        h2 {
+                            color: $canari;
+                        }
+                        h3, p {
+                            color: $blanc;
+                        }
                     }
                 }
                 &.valeurs {
