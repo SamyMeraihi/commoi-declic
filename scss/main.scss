@@ -18,7 +18,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Work Sans', sans-serif;
-    font-weight: 200;
+    font-weight: 400;
     color: $noir;
 }
 h1, h2, h3 {
@@ -35,7 +35,7 @@ h2 {
 .sous-titre {
     margin-top: 0;
     font-size: 1.5rem;
-    font-weight: 200;
+    font-weight: 300;
 }
 
 ul {
@@ -72,14 +72,6 @@ a {
 .space-between {
     justify-content: space-between;
 }
-.demo-illustration {
-    margin-bottom: 100px;
-    font-size: 2rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    opacity: 0.1;
-}
-
 //styles du bloc main
 main {
     position: relative;
@@ -105,9 +97,11 @@ main {
                         height: 500px;
                         position: absolute;
                         z-index: -1;
-                        top:-299px;
-                        background-image: url("../img/forme-module-3-horizontale.png");
-                        background-size: cover;
+                        top:-199px;
+                        background-image: url("../img/forme-module-3-horizontale.svg");
+                        background-size: 120%;
+                        background-position-x: center;
+                        background-repeat: no-repeat;
                     }
                     &:after {
                         content: "";
@@ -116,10 +110,12 @@ main {
                         height: 500px;
                         position: absolute;
                         z-index: -1;
-                        bottom: -180px;
-                        background-image: url("../img/forme-module-3-horizontale.png");
-                        background-size: cover;
+                        bottom: -130px;
+                        background-image: url("../img/forme-module-3-horizontale.svg");
                         background-position: bottom;
+                        background-position-x: center;
+                        background-size: 120%;
+                        background-repeat: no-repeat;
                     }
                     img {
                         width: 450px;
