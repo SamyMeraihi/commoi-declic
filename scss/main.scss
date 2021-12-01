@@ -83,7 +83,12 @@ main {
         }
         &.first {
             padding-bottom: 300px;
-            
+            .illustration-flottante {
+                position: absolute;
+                width: 500px;
+                top: -12%;
+                right: 5%;
+            }
             > section {
                 &:not(:last-of-type) {
                     padding-bottom: 80px;
@@ -193,6 +198,19 @@ main {
         &.second {
             max-width: 720px;
             margin: auto;
+            position: relative;
+            .illustration-flottante {
+                position: absolute;
+                &:nth-child(1) {
+
+                }
+                &:nth-child(2) {
+
+                }
+                width: 500px;
+                top: -12%;
+                right: 5%;
+            }
             > div {
                 width: 100%;
                 height: 407px;
