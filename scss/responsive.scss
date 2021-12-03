@@ -68,6 +68,20 @@
     
 }
 
+@media (max-width: 859.98px) {
+    header {
+        nav {
+            &.nav-1 {
+                display: none;
+            }
+            &.nav-2 {
+                display: flex;
+            }
+        }
+    }
+    
+}
+
 // Petis écrans (mobile paysage, en-dessous de 768px)
 @media (max-width: 767.98px) {
     
@@ -75,5 +89,11 @@
 
 // Petits écrans (mobile portrait, en-dessous de 576px)
 @media (max-width: 575.98px) {
-    
+    header {
+        nav {
+            .nav-logo {
+                padding: 25px 0;
+            }
+        }
+    }
 }

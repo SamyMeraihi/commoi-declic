@@ -1,6 +1,28 @@
 header {
     height: 900px;
     background-color: $creme;
+    .dropdown {
+        position: fixed;
+        top: -50px;
+        opacity: 0;
+        left: 0;
+        z-index: -98;
+        background: $creme;
+        width: 100vw;
+        height: 100vh;
+        transition: .8s ease;
+        &.dropdown-on {
+            position: fixed;
+            z-index: 98;
+            top: 0;
+            opacity: 1;
+        }
+        ul {
+            li {
+                margin: 0 0 20px 0;
+            }
+        }
+    }
     .illustration-flottante {
         position: absolute;
         width: 350px;
@@ -18,36 +40,42 @@ header {
             justify-content: space-between;
         }
         &.nav-2 {
-            //display: none;
+            display: none;
+            justify-content: space-between;
+            padding: 0 10%;
             svg {
                 position: relative;
                 width: 40px;
                 height: 30px;
                 rect {
-                width: 33px;
-                height: 4px;
-                fill:#61269e;
-                x: 3.5;
-                rx: 3px;
-                ry: 3px;
-                transition: .5s ease;
-                transform-origin: center;
+                    width: 33px;
+                    height: 4px;
+                    fill: $violet;
+                    x: 3.5;
+                    rx: 3px;
+                    ry: 3px;
+                    transition: .5s ease;
+                    transform-origin: center;
                 }
                 &.burger-off {
-                  rect {      
-                    &:nth-child(1) {
-                      y: 7;  
+                    rect {
+                        width: 33px;
+                        height: 4px;
+                        &:nth-child(1) {
+                            y: 7;  
+                        }
+                        &:nth-child(2) {
+                            y: 13;  
+                        }
+                        &:nth-child(3) {
+                            y: 19;  
+                        }
                     }
-                    &:nth-child(2) {
-                      y: 13;  
-                    }
-                    &:nth-child(3) {
-                      y: 19;  
-                    }
-                  }  
                 }
                 &.burger-on {
-                    rect {      
+                    rect {
+                        width: 33px;
+                        height: 4px;
                         &:nth-child(1) {
                             x: 10;
                             y: 15;
@@ -64,7 +92,28 @@ header {
                             y: 12;
                             transform: rotate(-45deg);
                         }
-                    }  
+                    }
+                }
+                &.arrow {
+                    rect {
+                        width: 14px;
+                        height: 3px;
+                        fill:#61269e;
+                        y: 6;
+                        rx: 2px;
+                        ry: 2px;
+                        transition: .5s ease;
+                        &:nth-child(1) {
+                            x: 11;
+                            y: 11;
+                            transform: rotate(-45deg);
+                        }
+                        &:nth-child(2) {
+                            x: 16;
+                            y: 10;
+                            transform: rotate(45deg);
+                        }
+                    }
                 }
                 &:hover {
                     cursor: pointer;
@@ -76,6 +125,7 @@ header {
         }
         .nav-logo {
             height: 100%;
+            padding: 20px 0;
             img {
                 height: inherit;
             }
@@ -91,13 +141,6 @@ header {
                     }
                 }
             }
-        }
-        .cta-newsletter {
-            padding : 6px 20px;
-            border-radius: 20px;
-            background-color: $creme;
-            border: 1px solid $violet;
-            color: $violet;
         }
     }
     .header-bg {

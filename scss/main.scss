@@ -60,6 +60,16 @@ a {
             border: none;
         }
     }
+    &.cta-newsletter {
+        padding : 6px 20px;
+        border-radius: 20px;
+        background-color: $creme;
+        border: 1px solid $violet;
+        color: $violet;
+    }
+}
+.d-none {
+    display: none !important;
 }
 .d-flex {
     display: flex;
@@ -82,7 +92,7 @@ main {
             padding-bottom: 50px;
         }
         &.first {
-            padding-bottom: 300px;
+            margin-bottom: 350px;
             .illustration-flottante {
                 position: absolute;
                 width: 350px;
@@ -196,26 +206,34 @@ main {
                     }
                 }
             }
+            .illustration-flottante-2 {
+                width: 300px;
+                position: absolute;
+                z-index: -1;
+                object-fit: contain;
+                &:nth-child(5) {
+                    right: 0;
+                    bottom: 1500px;
+                    transform: rotate(200deg) scale(2);
+                }
+                &:nth-child(6) {
+                    left: 50px;
+                    transform: rotate(15deg);
+                }
+                &:nth-child(7) {
+                    right: 50px;
+                }
+            }
         }
         &.second {
             max-width: 720px;
             margin: auto;
             position: relative;
-            .illustration-flottante {
-                position: absolute;
-                &:nth-child(1) {
-
-                }
-                &:nth-child(2) {
-
-                }
-                width: 500px;
-                top: -12%;
-                right: 5%;
-            }
             > div {
                 width: 100%;
-                height: 407px;
+                &.demo-video {
+                    height: 407px;
+                }
             }
             .demo-video {
                 position: relative;
@@ -229,9 +247,22 @@ main {
             }
             .formulaire {
                 padding: 0 80px;
+                margin-bottom: 150px;
+                h2 {                    
+                    margin-bottom: 25px;
+                    &:nth-child(4) {
+                        margin-top: 60px;
+                    }
+                }
                 img {
-                    max-width: 200px;
-                    margin-bottom: 80px;
+                    max-width: 250px;
+                    &:nth-child(2) {
+                        position: relative;
+                        left: 20%;
+                        margin: 30px 0;
+                        max-width: 100px;
+                        transform: rotate(55deg);
+                    }
                 }
                 form {
                     width: 100%;
