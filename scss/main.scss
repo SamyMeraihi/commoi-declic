@@ -24,6 +24,7 @@ body {
 h1, h2, h3 {
     font-family: 'Quicksand', sans-serif;
     color: $violet;
+    size: 28px;
 }
 h1 {
     font-size: 2rem;
@@ -58,9 +59,30 @@ a {
             background: $violet;
             color: $canari;
             border: none;
+        &:hover {
+            font-weight: bolder;
+            background-color: #FFBD36;
+            color:$violet;
         }
+        }
+        
     }
 }
+
+/*Bouton newsletter*/
+
+.cta-newsletter:hover {
+    background-color:#FCFBEA;
+    font-weight: bold; 
+}
+
+/*Bouton s'abonner*/
+
+
+
+
+
+
 .d-flex {
     display: flex;
     justify-content: center;
@@ -191,7 +213,14 @@ main {
                         margin: 40px 0 30px 0;
                         font-style: italic;
                         font-size: 1rem;
+
+                    a:hover {
+                        font-weight: bolder;
+                        background-color: $violet ;
+                        color: $blanc;
                     }
+                    }
+
                 }
             }
         }
