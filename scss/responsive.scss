@@ -1,11 +1,66 @@
-// Ecrans extra larges (desktop, 1200px et au-dessus)
-@media (min-width: 1199.99px) {
-    
-}
-
 // Ecrans larges (desktops, en-dessous de 1200px)
 @media (max-width: 1199.98px) {
-    
+    main {
+        .main-item {
+            &.first {
+                > section {
+                    &.avantages {
+                        &:before {
+                            height: 300px;
+                            top: -150px;
+                        }
+                        &:after {
+                            height: 800px;
+                            bottom: -150px;
+                            background-size: auto 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}// Ecrans larges (desktops, en-dessous de 1040px)
+@media (max-width: 1039.98px) {
+    main {
+        .main-item {
+            &.first {
+                > section {
+                    &.avantages {
+                        &:before {
+                            height: 400px;
+                            top: -140px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+// Ecrans larges (desktops, en-dessous de 1024px)
+@media (max-width: 1023.98px) {
+    header {
+        .illustration-flottante {
+            width: 250px;
+            top: 20%;
+        }
+    }
+    main {
+        .main-item {
+            &.first {
+                .illustration-flottante {
+                    width: 250px;
+                }
+                section {
+                    &.avantages {
+                        img {
+                            width: 40%;
+                            height: 80%;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 // Ecrans moyens (tablettes, en-dessous de 992px)
