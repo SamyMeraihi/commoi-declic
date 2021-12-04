@@ -58,6 +58,17 @@ a {
             background: $violet;
             color: $canari;
             border: none;
+            filter: grayscale(100%);
+            transition: .5s ease;
+            &:hover {
+                filter: grayscale(0);
+            }
+        }
+        &.cta-jaune {
+            background: $violet;
+            color: $canari;
+            border: 1px solid $canari;
+            margin-top: 20px;
         }
     }
     &.cta-newsletter {
@@ -106,6 +117,7 @@ main {
                 }
                 &.avantages {
                     position: relative;
+                    align-items: flex-start;
                     &:before {
                         content: "";
                         display: block;
@@ -141,11 +153,15 @@ main {
                         border-radius: 50px;
                         object-fit: cover;
                     }
-                    article {
+                    div {
                         width: 30%;
                         color: $blanc;
+                        align-items: flex-start;
                         h2 {
                             color: $canari;
+                        }
+                        .cta-jaune {
+                            margin-top:20px;
                         }
                     }
                 }
