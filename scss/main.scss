@@ -76,6 +76,11 @@ a {
             color: $canari;
             border: 1px solid $canari;
             margin-top: 20px;
+            transition: .4s ease;
+            &:hover {
+                background: $canari;
+                color: $violet;
+            }
         }
     }
     &.cta-newsletter {
