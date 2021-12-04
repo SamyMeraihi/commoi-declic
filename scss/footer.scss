@@ -24,11 +24,6 @@ footer {
         align-items: flex-start;
         justify-content: space-between;
         section {
-            h2 {
-                margin-top: 0;
-                color: $canari;
-                font-size: 1.5rem;
-            }
             ul {
                 line-height: 2rem;
                 padding: 0 40px 0 0;
@@ -37,25 +32,9 @@ footer {
                     align-items: flex-start;
                     a {
                         transition: .5s ease;
-                        &:after {
-                            content: "";
-                            display: block;
-                            height: 1px;
-                            width: 50px;
-                            opacity: 0;
-                            background-color: $mauve;
-                            transition: .5s ease;
-
-                        }
                     }
                     &:hover{
                         color: $canari;
-                        a {
-                            &:after {
-                                width: 100%;
-                                opacity: 1;
-                            }
-                        }
                     }
                 }
                 li:not(:last-child) {

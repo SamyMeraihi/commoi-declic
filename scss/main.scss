@@ -14,6 +14,7 @@ html {
 body {
     height: 100%;
     overflow: auto;
+    overflow-x: hidden;
     position: relative;
     margin: 0;
     padding: 0;
@@ -21,34 +22,34 @@ body {
     font-weight: 400;
     color: $noir;
 }
-h1, h2, h3 {
+.titre {
     font-family: 'Quicksand', sans-serif;
-    color: $violet;
-}
-h1 {
-    font-size: 2rem;
+    font-weight: 700;
+    line-height: 100%;
     text-align: center;
-}
-h2 {
-    font-size: 1.7rem;
+    &.titre-violet {
+        color: $violet;
+        font-size: 28px;
+    }
+    &.titre-canari {
+        color: $canari;
+        font-size: 30.5px;
+    }
+    &.titre-footer {
+        color: $canari;
+        font-size: 16px;
+        text-align: left;
+    }
 }
 .sous-titre {
     margin-top: 0;
-    font-size: 1.5rem;
+    font-size: 24px;
     font-weight: 300;
 }
-
 ul {
     padding: 0;
     li {
         list-style-type: none;
-    }
-}
-.nav-1 {
-    a {
-        &:hover {
-            color: $violet;
-        }
     }
 }
 a {
@@ -65,7 +66,7 @@ a {
             background: $violet;
             color: $canari;
             border: none;
-            
+            transition: .4s ease;
             &:hover {
                 background-color: $canari;
                 color: $violet;
@@ -89,10 +90,27 @@ a {
         background-color: $creme;
         border: 1px solid $violet;
         color: $violet;
+        transition: .4s ease;
         &:hover {
-            background-color: $creme;
+            text-shadow:
+            -.5px -.5px 0 $violet,
+            .5px -.5px 0 $violet,
+            -0px 0px 0 $violet,
+            0px 0px 0 $violet;
+        }
+        /*
+        &:hover {
             font-weight: 700;
         }
+        
+        OU
+        
+        &:hover {
+            background-color: $canari;
+            color: $violet;
+            border: 1px solid $creme;
+        }
+        */
     }
 }
 .d-none {
@@ -173,9 +191,6 @@ main {
                         width: 30%;
                         color: $blanc;
                         align-items: flex-start;
-                        h2 {
-                            color: $canari;
-                        }
                         .cta-jaune {
                             margin-top:20px;
                         }
@@ -237,6 +252,7 @@ main {
                         font-size: 1rem;
                     }
                     a {
+                        transition: .4s ease;
                         &:hover {
                             background-color: $violet;
                             color: $blanc;
@@ -305,25 +321,27 @@ main {
                 form {
                     width: 100%;
                     input {
-                        height: 80px;
+                        height: 77px;
                         margin: 0;
                         outline: none;
                         border: 1px solid $violet;
-                        font-size: 1.17rem;
                         &#mce-EMAIL {
                             padding-left: 50px;
                             border-radius: 50px 0 0 50px;
                             flex: 1;
+                            font-size: 16px;
                             color: $violet;
                             &::-webkit-input-placeholder {
                                 font-style: italic;
-                                opacity: 0.5;
+                                color: $noir;
+                                opacity: 0.2;
                             }
+                            transition: .4s ease;
                             &:hover {
-                                box-shadow: 0px 0px 8px 0px $violet;
+                                box-shadow: 0px 0px 8px 0px $mauve;
                             }
                             &:focus {
-                                box-shadow: 0px 0px 8px 0px $violet;
+                                box-shadow: 0px 0px 8px 0px $mauve;
                             }
                         }
                         &#mc-embedded-subscribe {
@@ -332,8 +350,10 @@ main {
                             background-color: $violet;
                             border-radius: 0 50px 50px 0;
                             border-left: none;
-                            font-weight: bold;
+                            font-size: 18px;
+                            font-weight: 700;
                             color: $canari;
+                            transition: .4s ease;
                             &:hover {
                                 background-color: $creme;
                                 color: $violet;

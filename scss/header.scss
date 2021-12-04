@@ -54,7 +54,7 @@ header {
                     x: 3.5;
                     rx: 3px;
                     ry: 3px;
-                    transition: .5s ease;
+                    transition: .4s ease;
                     transform-origin: center;
                 }
                 &.burger-off {
@@ -102,7 +102,7 @@ header {
                         y: 6;
                         rx: 2px;
                         ry: 2px;
-                        transition: .5s ease;
+                        transition: .4s ease;
                         &:nth-child(1) {
                             x: 11;
                             y: 11;
@@ -136,8 +136,27 @@ header {
                 margin-right: 40px;
                 a {
                     color: $noir;
-                    &:hover {
+                    position: relative;
+                    &:after {
+                        content: "";
+                        display: block;
+                        position: absolute;
+                        right: 0;
+                        margin-top: 5px;
+                        height: 2px;
+                        width: 0px;
+                        opacity: 0;
+                        background-color: $violet;
+                        transition: .4s ease;
+                    }
+                }
+                &:hover{
+                    a {
                         color: $violet;
+                        &:after {
+                            width: 40px;
+                            opacity: 1;
+                        }
                     }
                 }
             }
@@ -151,6 +170,7 @@ header {
         z-index: 2;
         .more {
             margin-top: 50px;
+            font-weight: 400;
             font-style: italic;
         }
     }
