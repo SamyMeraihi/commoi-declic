@@ -44,6 +44,13 @@ ul {
         list-style-type: none;
     }
 }
+.nav-1 {
+    a {
+        &:hover {
+            color: $violet;
+        }
+    }
+}
 a {
     text-decoration: none;
     color: unset;
@@ -58,10 +65,10 @@ a {
             background: $violet;
             color: $canari;
             border: none;
-            filter: grayscale(100%);
-            transition: .5s ease;
+            
             &:hover {
-                filter: grayscale(0);
+                background-color: $canari;
+                color: $violet;
             }
         }
         &.cta-jaune {
@@ -77,6 +84,10 @@ a {
         background-color: $creme;
         border: 1px solid $violet;
         color: $violet;
+        &:hover {
+            background-color: $creme;
+            font-weight: 700;
+        }
     }
 }
 .d-none {
@@ -220,6 +231,12 @@ main {
                         font-style: italic;
                         font-size: 1rem;
                     }
+                    a {
+                        &:hover {
+                            background-color: $violet;
+                            color: $blanc;
+                        }
+                    }
                 }
             }
             .illustration-flottante-2 {
@@ -292,9 +309,16 @@ main {
                             padding-left: 50px;
                             border-radius: 50px 0 0 50px;
                             flex: 1;
+                            color: $violet;
                             &::-webkit-input-placeholder {
                                 font-style: italic;
                                 opacity: 0.5;
+                            }
+                            &:hover {
+                                box-shadow: 0px 0px 8px 0px $violet;
+                            }
+                            &:focus {
+                                box-shadow: 0px 0px 8px 0px $violet;
                             }
                         }
                         &#mc-embedded-subscribe {
@@ -305,6 +329,11 @@ main {
                             border-left: none;
                             font-weight: bold;
                             color: $canari;
+                            &:hover {
+                                background-color: $creme;
+                                color: $violet;
+                                cursor: pointer;
+                            }
                         }
                     }
                 }
@@ -312,7 +341,6 @@ main {
         }
     }
 }
-
 // Import templates & composants
 @import "header";
 @import "footer";
