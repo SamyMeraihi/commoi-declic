@@ -7,18 +7,16 @@
                     width: 300px;
                     top: -8%;
                 }
-                > section {
-                    &.avantages {
-                        &:before {
-                            height: 300px;
-                            top: -150px;
-                        }
-                        &:after {
-                            height: 600px;
-                            bottom: -150px;
-                            background-size: cover;
-                            background-position: bottom;
-                        }
+                .avantages {
+                    &:before {
+                        height: 300px;
+                        top: -150px;
+                    }
+                    &:after {
+                        height: 600px;
+                        bottom: -150px;
+                        background-size: cover;
+                        background-position: bottom;
                     }
                 }
             }
@@ -29,12 +27,10 @@
     main {
         .main-item {
             &.first {
-                > section {
-                    &.avantages {
-                        &:before {
-                            height: 400px;
-                            top: -140px;
-                        }
+                .avantages {
+                    &:before {
+                        height: 400px;
+                        top: -140px;
                     }
                 }
             }
@@ -52,11 +48,39 @@
     main {
         .main-item {
             &.first {
-                section {
-                    &.avantages {
-                        img {
-                            width: 40%;
-                            height: 80%;
+                .avantages {
+                    padding: 0 10%;
+                    align-items: center;
+                    &:before {
+                        height: 100%;
+                        background-size: 200%;
+                    }
+                    &:after {
+                        height: 100%;
+                        background-size: 200%;
+                        bottom: 150px;
+                    }
+                    img {
+                        order: 2;
+                        width: 100%;
+                        margin: 0;
+                    }
+                    div {
+                        order: 1;
+                        width: 100%;
+                        max-width: 500px;
+                        margin-bottom: 80px;
+                        align-items: center;
+                        .titre {
+                            width: 100%;
+                            text-align: left;
+                        }
+                        span {
+                            display: inline-block;
+                            width: 100%;
+                        }
+                        a {
+                            text-align: center;
                         }
                     }
                 }
@@ -82,19 +106,79 @@
         }
     }
     
+    
 }
 
 // Petis écrans (mobile paysage, en-dessous de 768px)
 @media (max-width: 767.98px) {
-    
+    header {
+        .header-bg {
+            padding-bottom: 300px;
+        }
+    }
+    main {
+        .main-item {
+            &.first {
+                .avantages {
+                    &:before {
+                        height: 100%;
+                        background-size: 300%;
+                        background-position-x: 80%;
+                        top: -250px;
+                    }
+                    &:after {
+                        height: 100%;
+                        background-size: 300%;
+                        bottom: 100px;
+                    }
+                }
+            }
+        }
+    }
 }
-
+@media (max-width: 588.98px) {
+    main {
+        .main-item {
+            &.first {
+                .illustration-flottante {
+                    top: -9%;
+                    right: -10%;
+                }
+                .avantages {
+                    &:before {
+                        height: 100%;
+                        background-size: 500%;
+                        background-position-x: 80%;
+                        top: -260px;
+                    }
+                    &:after {
+                        height: 100%;
+                        background-size: 500%;
+                        bottom: 100px;
+                    }
+                }
+            }
+        }
+    }
+}
 // Petits écrans (mobile portrait, en-dessous de 576px)
 @media (max-width: 575.98px) {
     header {
         nav {
             .nav-logo {
                 padding: 25px 0;
+            }
+        }
+    }
+}
+@media (max-width: 475.98px) {
+    main {
+        .main-item {
+            &.first {
+                .illustration-flottante {
+                    width: 250px;
+                    top: -8%;
+                }
             }
         }
     }

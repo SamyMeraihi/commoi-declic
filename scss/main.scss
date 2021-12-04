@@ -26,10 +26,10 @@ body {
     font-family: 'Quicksand', sans-serif;
     font-weight: 700;
     line-height: 100%;
-    text-align: center;
     &.titre-violet {
         color: $violet;
         font-size: 28px;
+        text-align: center;
     }
     &.titre-canari {
         color: $canari;
@@ -38,7 +38,6 @@ body {
     &.titre-footer {
         color: $canari;
         font-size: 16px;
-        text-align: left;
     }
 }
 .sous-titre {
@@ -149,114 +148,115 @@ main {
                 &:not(:last-of-type) {
                     padding-bottom: 80px;
                 }
-                &.avantages {
-                    position: relative;
+            }
+            .avantages {
+                position: relative;
+                flex-wrap: wrap;     
+                align-items: flex-start;
+                &:before {
+                    content: "";
+                    display: block;
+                    width: 100%;
+                    height: 500px;
+                    position: absolute;
+                    z-index: -1;
+                    top:-199px;
+                    background-image: url("../img/forme-module-3-horizontale.svg");
+                    background-size: 120%;
+                    background-position-x: center;
+                    background-repeat: no-repeat;
+                }
+                &:after {
+                    content: "";
+                    display: block;
+                    width: 100%;
+                    height: 500px;
+                    position: absolute;
+                    z-index: -1;
+                    bottom: -130px;
+                    background-image: url("../img/forme-module-3-horizontale.svg");
+                    background-position: bottom;
+                    background-position-x: center;
+                    background-size: 120%;
+                    background-repeat: no-repeat;
+                }
+                img {
+                    width: 450px;
+                    height: 400px;
+                    min-height: 350px;
+                    margin: 0 40px 0 0;
+                    border-radius: 50px;
+                    object-fit: cover;
+                }
+                div {
+                    width: 30%;
+                    color: $blanc;
                     align-items: flex-start;
-                    &:before {
-                        content: "";
-                        display: block;
-                        width: 100%;
-                        height: 500px;
-                        position: absolute;
-                        z-index: -1;
-                        top:-199px;
-                        background-image: url("../img/forme-module-3-horizontale.svg");
-                        background-size: 120%;
-                        background-position-x: center;
-                        background-repeat: no-repeat;
-                    }
-                    &:after {
-                        content: "";
-                        display: block;
-                        width: 100%;
-                        height: 500px;
-                        position: absolute;
-                        z-index: -1;
-                        bottom: -130px;
-                        background-image: url("../img/forme-module-3-horizontale.svg");
-                        background-position: bottom;
-                        background-position-x: center;
-                        background-size: 120%;
-                        background-repeat: no-repeat;
-                    }
-                    img {
-                        width: 450px;
-                        height: 400px;
-                        min-height: 350px;
-                        margin: 0 40px 0 0;
-                        border-radius: 50px;
-                        object-fit: cover;
-                    }
-                    div {
-                        width: 30%;
-                        color: $blanc;
-                        align-items: flex-start;
-                        .cta-jaune {
-                            margin-top:20px;
-                        }
+                    .cta-jaune {
+                        margin-top:20px;
                     }
                 }
-                &.valeurs {
-                    h2 {
-                        margin: 60px 0;
-                    }
-                    .valeurs-cartes {
-                        section {
-                            width: 350px;
-                            height: 350px;
-                            padding: 0 50px;
-                            position: relative;
-                            &:not(:last-child) {
-                                margin-right: 30px;
-                            }
-                            &.information {
-                                background-image: url("../img/forme-declic-forme-modules.png");
-                                background-size: cover;
-                            }
-                            
-                            &.accompagnement {
-                                background-image: url("../img/forme-declic-forme-modules-2.png");
-                                background-size: cover;
-                            }
+            }
+            .valeurs {
+                h2 {
+                    margin: 60px 0;
+                }
+                .valeurs-cartes {
+                    section {
+                        width: 350px;
+                        height: 350px;
+                        padding: 0 50px;
+                        position: relative;
+                        &:not(:last-child) {
+                            margin-right: 30px;
+                        }
+                        &.information {
+                            background-image: url("../img/forme-declic-forme-modules.png");
+                            background-size: cover;
+                        }
+                        
+                        &.accompagnement {
+                            background-image: url("../img/forme-declic-forme-modules-2.png");
+                            background-size: cover;
+                        }
 
-                            img {
-                                width: 80px;
-                            }
-                            h3 {
-                                margin: 15px 0;
-                            }
-                            .separateur {
-                                width: 20px;
-                                height: 1px;
-                                margin: 10px 0;
-                                background-color: $noir;
-                            }
-                            p {
-                                margin: 0;
-                                padding: 0 15px;
-                                text-align: center;
-                                font-size: 1rem;
-                            }
+                        img {
+                            width: 80px;
+                        }
+                        h3 {
+                            margin: 15px 0;
+                        }
+                        .separateur {
+                            width: 20px;
+                            height: 1px;
+                            margin: 10px 0;
+                            background-color: $noir;
+                        }
+                        p {
+                            margin: 0;
+                            padding: 0 15px;
+                            text-align: center;
+                            font-size: 1rem;
                         }
                     }
                 }
-                &.etablissement {
-                    max-width: 600px;
-                    margin: auto;
-                    > * {
-                        text-align: center;
-                    }
-                    p {
-                        margin: 40px 0 30px 0;
-                        font-style: italic;
-                        font-size: 1rem;
-                    }
-                    a {
-                        transition: .4s ease;
-                        &:hover {
-                            background-color: $violet;
-                            color: $blanc;
-                        }
+            }
+            .etablissement {
+                max-width: 600px;
+                margin: auto;
+                > * {
+                    text-align: center;
+                }
+                p {
+                    margin: 40px 0 30px 0;
+                    font-style: italic;
+                    font-size: 1rem;
+                }
+                a {
+                    transition: .4s ease;
+                    &:hover {
+                        background-color: $violet;
+                        color: $blanc;
                     }
                 }
             }
