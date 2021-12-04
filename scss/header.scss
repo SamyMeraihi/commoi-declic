@@ -10,7 +10,7 @@ header {
         background: $creme;
         width: 100vw;
         height: 100vh;
-        transition: .8s ease;
+        transition: 0.8s ease;
         &.dropdown-on {
             position: fixed;
             z-index: 98;
@@ -54,7 +54,7 @@ header {
                     x: 3.5;
                     rx: 3px;
                     ry: 3px;
-                    transition: .5s ease;
+                    transition: 0.5s ease;
                     transform-origin: center;
                 }
                 &.burger-off {
@@ -62,13 +62,13 @@ header {
                         width: 33px;
                         height: 4px;
                         &:nth-child(1) {
-                            y: 7;  
+                            y: 7;
                         }
                         &:nth-child(2) {
-                            y: 13;  
+                            y: 13;
                         }
                         &:nth-child(3) {
-                            y: 19;  
+                            y: 19;
                         }
                     }
                 }
@@ -83,8 +83,8 @@ header {
                             transform: rotate(45deg);
                         }
                         &:nth-child(2) {
-                            y: 13;  
-                            opacity: 0;  
+                            y: 13;
+                            opacity: 0;
                         }
                         &:nth-child(3) {
                             width: 18px;
@@ -98,11 +98,11 @@ header {
                     rect {
                         width: 14px;
                         height: 3px;
-                        fill:#61269e;
+                        fill: #61269e;
                         y: 6;
                         rx: 2px;
                         ry: 2px;
-                        transition: .5s ease;
+                        transition: 0.5s ease;
                         &:nth-child(1) {
                             x: 11;
                             y: 11;

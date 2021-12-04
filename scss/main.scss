@@ -17,12 +17,14 @@ body {
     position: relative;
     margin: 0;
     padding: 0;
-    font-family: 'Work Sans', sans-serif;
+    font-family: "Work Sans", sans-serif;
     font-weight: 400;
     color: $noir;
 }
-h1, h2, h3 {
-    font-family: 'Quicksand', sans-serif;
+h1,
+h2,
+h3 {
+    font-family: "Quicksand", sans-serif;
     color: $violet;
 }
 h1 {
@@ -44,6 +46,9 @@ ul {
         list-style-type: none;
     }
 }
+.nav-1 a:hover {
+    color: $violet;
+}
 a {
     text-decoration: none;
     color: unset;
@@ -58,14 +63,24 @@ a {
             background: $violet;
             color: $canari;
             border: none;
+
+            &:hover {
+                background-color: $canari;
+                color: $violet;
+            }
         }
     }
     &.cta-newsletter {
-        padding : 6px 20px;
+        padding: 6px 20px;
         border-radius: 20px;
         background-color: $creme;
         border: 1px solid $violet;
         color: $violet;
+
+        &:hover {
+            background-color: $creme;
+            font-weight: 700;
+        }
     }
 }
 .d-none {
@@ -113,7 +128,7 @@ main {
                         height: 500px;
                         position: absolute;
                         z-index: -1;
-                        top:-199px;
+                        top: -199px;
                         background-image: url("../img/forme-module-3-horizontale.svg");
                         background-size: 120%;
                         background-position-x: center;
@@ -166,7 +181,7 @@ main {
                                 background-image: url("../img/forme-declic-forme-modules.png");
                                 background-size: cover;
                             }
-                            
+
                             &.accompagnement {
                                 background-image: url("../img/forme-declic-forme-modules-2.png");
                                 background-size: cover;
@@ -204,6 +219,10 @@ main {
                         font-style: italic;
                         font-size: 1rem;
                     }
+                    a:hover {
+                        background-color: $violet;
+                        color: $blanc;
+                    }
                 }
             }
             .illustration-flottante-2 {
@@ -240,7 +259,7 @@ main {
                 text-align: center;
                 text-transform: uppercase;
                 background-image: url("../img/video-preview-maquette-fullvisuel.png");
-                background-size: cover; 
+                background-size: cover;
             }
             h2 {
                 margin: 80px 0;
@@ -248,7 +267,7 @@ main {
             .formulaire {
                 padding: 0 80px;
                 margin-bottom: 150px;
-                h2 {                    
+                h2 {
                     margin-bottom: 25px;
                     &:nth-child(4) {
                         margin-top: 60px;
@@ -276,9 +295,16 @@ main {
                             padding-left: 50px;
                             border-radius: 50px 0 0 50px;
                             flex: 1;
+                            color: $violet;
                             &::-webkit-input-placeholder {
                                 font-style: italic;
                                 opacity: 0.5;
+                            }
+                            &:hover {
+                                box-shadow: 0px 0px 8px 0px $violet;
+                            }
+                            &:focus {
+                                box-shadow: 0px 0px 8px 0px $violet;
                             }
                         }
                         &#mc-embedded-subscribe {
@@ -289,6 +315,12 @@ main {
                             border-left: none;
                             font-weight: bold;
                             color: $canari;
+
+                            &:hover {
+                                background-color: $creme;
+                                color: $violet;
+                                cursor: pointer;
+                            }
                         }
                     }
                 }

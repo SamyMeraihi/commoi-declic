@@ -12,7 +12,7 @@ footer {
         width: 100%;
         height: 150px;
         position: absolute;
-        top:-149px;
+        top: -149px;
         background-image: url("../img/forme-module-3-horizontale-footer.svg");
         background-size: 120%;
         background-position-x: center;
@@ -36,7 +36,7 @@ footer {
                     justify-content: flex-start;
                     align-items: flex-start;
                     a {
-                        transition: .5s ease;
+                        transition: 0.5s ease;
                         &:after {
                             content: "";
                             display: block;
@@ -44,11 +44,10 @@ footer {
                             width: 50px;
                             opacity: 0;
                             background-color: $mauve;
-                            transition: .5s ease;
-
+                            transition: 0.5s ease;
                         }
                     }
-                    &:hover{
+                    &:hover {
                         color: $canari;
                         a {
                             &:after {
@@ -69,7 +68,6 @@ footer {
                 width: 40%;
                 ul {
                     li {
-                        
                         &:before {
                             display: block;
                             width: 20px;
