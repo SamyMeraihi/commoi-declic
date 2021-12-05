@@ -63,6 +63,7 @@
                     img {
                         order: 2;
                         width: 100%;
+                        max-width: 500px;
                         margin: 0;
                     }
                     div {
@@ -105,8 +106,60 @@
             }
         }
     }
-    
-    
+    main {
+        .main-item {
+            &.first {
+                margin-bottom: 100px;
+                .valeurs {
+                    .valeurs-cartes {
+                        flex-direction: column;
+                        padding: 30px;
+                        height: auto;
+                    }
+                }
+                .illustration-flottante-2 {
+                    &:nth-child(5) {
+                        right: -70px;
+                        bottom: 1550px;
+                        transform: rotate(190deg) scale(1.5);
+                    }
+                    &:nth-child(6) {
+                        display: none;
+
+                    }
+                    &:nth-child(7) {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+    footer {
+        .footer-content {
+            padding-left: 60px;
+            flex-wrap: wrap;
+            justify-content: center;
+            section {
+                &.footer-information {
+                    width: 40%;
+                }
+                &.footer-contact {
+                    width: 80%;
+                    order: 3;
+                }
+                &.footer-social-media {
+                    width: 40%;
+                    div {
+                        padding-right: 0;
+                        flex-wrap: wrap;
+                        a {
+                            padding: 0 25px 25px 0;
+                        }
+                    }                    
+                }
+            }
+        }
+    }
 }
 
 // Petis écrans (mobile paysage, en-dessous de 768px)
@@ -157,6 +210,12 @@
                         bottom: 100px;
                     }
                 }
+                .illustration-flottante-2 {
+                    &:nth-child(5) {
+                        right: -200px;
+                        bottom: 1600px;
+                    }
+                }
             }
         }
     }
@@ -167,6 +226,38 @@
         nav {
             .nav-logo {
                 padding: 25px 0;
+            }
+        }
+    }
+    main {
+        .main-item {
+            &.first {
+                .etablissement {
+                    padding: 0 30px;
+                }
+            }
+        }
+    }
+    footer {
+        &:before {
+            background-size: 200%;
+        }
+        .footer-content {
+            flex-direction: column;
+            align-items: center;
+            section {
+                width: 75% !important;
+                margin-bottom: 25px;
+                display: flex;
+                flex-direction: column;
+                &.footer-social-media {
+                    div {
+                        margin: 16px 0;
+                        a {
+                            padding-bottom: 0;
+                        }
+                    }
+                }
             }
         }
     }

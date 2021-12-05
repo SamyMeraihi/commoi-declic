@@ -203,13 +203,10 @@ main {
                 }
                 .valeurs-cartes {
                     section {
-                        width: 350px;
-                        height: 350px;
-                        padding: 0 50px;
+                        max-width: 350px;
+                        padding: 50px 30px;
                         position: relative;
-                        &:not(:last-child) {
-                            margin-right: 30px;
-                        }
+                        
                         &.information {
                             background-image: url("../img/forme-declic-forme-modules.png");
                             background-size: cover;
@@ -280,6 +277,7 @@ main {
             }
         }
         &.second {
+            width: 100vw;
             max-width: 720px;
             margin: auto;
             position: relative;
