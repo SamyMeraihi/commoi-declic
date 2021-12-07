@@ -7,17 +7,16 @@
 * {
     box-sizing: border-box;
 }
-html,
-body {
-    height: auto;
-    min-height: 100%;
-}
 
 html {
-    overflow: auto;
+    height: 100%;
+    overflow: hidden;
     cursor: url("../img/cursor-purple.svg"), auto;
 }
 body {
+    height: 100%;
+    overflow: auto;
+    overflow-x: hidden;
     position: relative;
     margin: 0;
     padding: 0;
@@ -108,8 +107,6 @@ main {
     position: relative;
     z-index: 2;
     padding: 0 0 100px 0;
-    overflow-x: hidden;
-
     .background {
         background-color: #fcfbea;
         height: 100vh;
@@ -121,18 +118,23 @@ main {
         background-color: $creme;
         padding-top: 45vh;
         position: relative;
-
-        width: 1440px;
+        width: 100%;
+        max-width: 1440px;
         margin-left: auto;
         margin-right: auto;
-
         .illustration-flottante {
             position: absolute;
+            z-index: -0;
             width: 436px;
             height: 415px;
-            top: 186px;
+            top: 125px;
             left: 110px;
             transform: rotate(10deg);
+        }
+        div {
+            justify-content: flex-end;
+            position: relative;
+            z-index: 2;
         }
         h1 {
             margin: 0px;

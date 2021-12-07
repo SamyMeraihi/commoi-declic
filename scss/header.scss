@@ -47,6 +47,7 @@ header {
                     color: $violet;
                     &:hover {
                         background-color: $canari;
+                        border-color: $canari;
                         color: $violet;
                     }
                 }
@@ -173,18 +174,6 @@ header {
                     }
                 }
             }
-        }
-    }
-    .header-bg {
-        padding: 0 50px 250px 40px;
-        justify-content: flex-end;
-        height: 100%;
-        position: relative;
-        z-index: 2;
-        .more {
-            margin-top: 50px;
-            font-weight: 400;
-            font-style: italic;
         }
     }
 }

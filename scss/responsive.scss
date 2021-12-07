@@ -1,4 +1,23 @@
-// Ecrans larges (desktops, en-dessous de 1200px)
+// Ecrans larges (desktops, en-dessous de 1440px)
+@media (max-width: 1439.98) {
+    main {
+        .main-item {
+            &.first {
+                #avantages {
+                    .vague {
+                        left: -338px;
+                    }
+                }
+            }
+        }
+    }
+    footer {
+        .vague {
+            left: -338px;
+        }
+    }
+}
+
 @media (max-width: 1199.98px) {
     main {
         .main-item {
@@ -22,7 +41,8 @@
             }
         }
     }
-}// Ecrans larges (desktops, en-dessous de 1040px)
+}
+// Ecrans larges (desktops, en-dessous de 1040px)
 @media (max-width: 1039.98px) {
     main {
         .main-item {
