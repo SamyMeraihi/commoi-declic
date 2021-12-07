@@ -1,5 +1,6 @@
 header {
     background-color: $creme;
+
     .dropdown {
         position: fixed;
         top: -50px;
@@ -10,24 +11,28 @@ header {
         width: 100vw;
         height: 100vh;
         transition: 0.8s ease;
+
         &.dropdown-on {
             position: fixed;
             z-index: 98;
             top: 0;
             opacity: 1;
         }
+
         ul {
             li {
                 margin: 0 0 20px 0;
             }
         }
     }
+
     nav {
         width: 100%;
         height: 100px;
         position: fixed;
         z-index: 99;
         background-color: $creme;
+
         &.nav-1 {
             padding: 0 80px;
             justify-content: space-between;
@@ -45,6 +50,7 @@ header {
                     line-height: 50px;
                     background-color: $creme;
                     color: $violet;
+
                     &:hover {
                         background-color: $canari;
                         border-color: $canari;
@@ -53,104 +59,41 @@ header {
                 }
             }
         }
+
         &.nav-2 {
             display: none;
             justify-content: space-between;
             padding: 0 10%;
-            svg {
-                position: relative;
-                width: 40px;
-                height: 30px;
-                rect {
+            img {
+                object-fit: contain;
+                &.burger {
                     width: 33px;
-                    height: 4px;
-                    fill: $violet;
-                    x: 3.5;
-                    rx: 3px;
-                    ry: 3px;
-                    transition: 0.4s ease;
-                    transform-origin: center;
                 }
-                &.burger-off {
-                    rect {
-                        width: 33px;
-                        height: 4px;
-                        &:nth-child(1) {
-                            y: 7;
-                        }
-                        &:nth-child(2) {
-                            y: 13;
-                        }
-                        &:nth-child(3) {
-                            y: 19;
-                        }
-                    }
-                }
-                &.burger-on {
-                    rect {
-                        width: 33px;
-                        height: 4px;
-                        &:nth-child(1) {
-                            x: 10;
-                            y: 15;
-                            width: 18px;
-                            transform: rotate(45deg);
-                        }
-                        &:nth-child(2) {
-                            y: 13;
-                            opacity: 0;
-                        }
-                        &:nth-child(3) {
-                            width: 18px;
-                            x: 09;
-                            y: 12;
-                            transform: rotate(-45deg);
-                        }
-                    }
-                }
-                &.arrow {
-                    rect {
-                        width: 14px;
-                        height: 3px;
-                        fill: #61269e;
-                        y: 6;
-                        rx: 2px;
-                        ry: 2px;
-                        transition: 0.4s ease;
-                        &:nth-child(1) {
-                            x: 11;
-                            y: 11;
-                            transform: rotate(-45deg);
-                        }
-                        &:nth-child(2) {
-                            x: 16;
-                            y: 10;
-                            transform: rotate(45deg);
-                        }
-                    }
-                }
-                &:hover {
-                    cursor: url("../img/cursor-yellow.png"), default;
-                    rect {
-                        fill: $canari;
-                    }
+                &.close {
+                    width: 18px;
                 }
             }
         }
+
         .nav-logo {
             height: 100%;
             padding: 30px 0;
+
             img {
                 height: 50px;
             }
         }
+
         ul {
             display: flex;
+
             li {
                 margin-right: 40px;
+
                 a {
                     color: $noir;
                     position: relative;
+
                     &:after {
                         content: "";
                         display: block;
@@ -164,9 +107,11 @@ header {
                         transition: 0.4s ease;
                     }
                 }
+
                 &:hover {
                     a {
                         color: $violet;
+
                         &:after {
                             width: 40px;
                             opacity: 1;

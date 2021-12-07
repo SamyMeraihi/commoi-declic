@@ -116,12 +116,11 @@ main {
     #rejoindre {
         height: 100vh;
         background-color: $creme;
-        padding-top: 45vh;
+        padding-top: 50vh;
         position: relative;
         width: 100%;
         max-width: 1440px;
-        margin-left: auto;
-        margin-right: auto;
+        margin: auto;
         .illustration-flottante {
             position: absolute;
             z-index: -0;
@@ -129,6 +128,7 @@ main {
             height: 415px;
             top: 125px;
             left: 110px;
+            object-fit: contain;
             transform: rotate(10deg);
         }
         div {
@@ -152,8 +152,7 @@ main {
     }
     .main-item {
         max-width: 1440px;
-        margin-left: auto;
-        margin-right: auto;
+        margin: auto;
         &.first {
             #video {
                 margin-top: 200px;
@@ -175,38 +174,46 @@ main {
                 flex-wrap: wrap;
                 align-items: flex-start;
                 z-index: 1;
-                .vague {
-                    position: absolute;
-                    width: 1925px;
-                    height: 950px;
-                    min-width: 1925px;
-                    top: -194px;
-                    z-index: -1;
+                img {
+                    object-fit: contain;
+                    &.vague {
+                        position: absolute;
+                        width: 1925px;
+                        height: 950px;
+                        min-width: 1925px;
+                        top: -194px;
+                        z-index: -1;
+                    }
+                    &.image {
+                        width: 100%;
+                        max-width: 457px;
+                        min-width: 360px;
+                        height: 379px;
+                        border-radius: 50px;
+                        object-fit: cover;
+                    }
+                    &.perso {
+                        position: absolute;
+                        width: 444px;
+                        height: 415px;
+                        top: -353px;
+                        right: 49.5px;
+                        transform: rotate(6deg);
+                    }
                 }
-
-                .image {
-                    width: 457px;
-                    height: 379px;
-                    border-radius: 50px;
-                    object-fit: cover;
+                .container
+                {
+                    display: flex;
+                    flex-direction: row;
                 }
+                .d-flex {
+                    width: 100%;
+                    max-width: 481px;
 
-                .perso {
-                    position: absolute;
-                    width: 444px;
-                    height: 415px;
-                    top: -353px;
-                    right: 49.5px;
-                    transform: rotate(6deg);
-                }
-
-                div {
-                    width: 481px;
                     margin-left: 58px;
                     color: $blanc;
                     align-items: flex-start;
                     align-self: end;
-
                     h2 {
                         margin-bottom: 10px;
                         margin-top: 0px;
@@ -217,7 +224,7 @@ main {
                         line-height: 28px;
                     }
                     p {
-                        width: 417px;
+                        max-width: 417px;
                         font-size: 16px;
                         line-height: 19px;
                         font-weight: 300;
@@ -260,8 +267,8 @@ main {
                             background-repeat: no-repeat;
                         }
                         &.valorisation {
-                            margin-left: 120px;
-                            margin-right: 120px;
+                            margin-left: 100px;
+                            margin-right: 100px;
                         }
                         &.accompagnement:before {
                             content: "";
@@ -295,7 +302,7 @@ main {
                                 }
                             }
                             &:hover {
-                                cursor: url("../img/cursor-yellow.png"), default;
+                                cursor: pointer;
                                 opacity: 1;
                             }
                         }
@@ -367,7 +374,7 @@ main {
                     }
                 }
                 h2 {
-                    width: 700px;
+                    max-width: 700px;
                     margin-top: 550px;
                     margin-bottom: 0px;
                     font-family: Quicksand;
@@ -378,6 +385,7 @@ main {
                     text-align: center;
                 }
                 p {
+                    max-width: 760px;
                     font-family: Work Sans;
                     font-style: normal;
                     font-weight: 300;
@@ -386,13 +394,11 @@ main {
                     text-align: center;
 
                     &:first-of-type {
-                        width: 760px;
                         margin-top: 20px;
                         margin-bottom: 0px;
                     }
 
                     &:last-of-type {
-                        width: 760px;
                         margin-top: 40px;
                         margin-bottom: 0px;
                     }

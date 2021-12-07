@@ -5,12 +5,13 @@
             &.first {
                 #avantages {
                     .vague {
-                        left: -338px;
+                        width: 100%;
                     }
                 }
             }
         }
     }
+
     footer {
         .vague {
             left: -338px;
@@ -20,43 +21,118 @@
 
 @media (max-width: 1199.98px) {
     main {
+        #rejoindre {
+            .illustration-flottante {
+                top: 80px;
+                left: 50px;
+            }
+        }
+
         .main-item {
             &.first {
                 .illustration-flottante {
                     width: 300px;
                     top: -8%;
                 }
-                .avantages {
-                    &:before {
-                        height: 300px;
-                        top: -150px;
+
+                #avantages {
+                    div {
+                        align-self: start;
                     }
-                    &:after {
-                        height: 600px;
-                        bottom: -150px;
-                        background-size: cover;
-                        background-position: bottom;
+
+                    img {
+                        &.perso {
+                            width: 320px;
+                            height: auto;
+                            top: -290px;
+                            right: -60px;
+                        }
+                    }
+
+                    .container {
+                        flex-direction: column-reverse;
+
+                        .d-flex {
+                            margin-left: 0px;
+
+                            h2 {
+                                margin-bottom: 0px;
+                            }
+
+                            .sous-titre {
+                                margin-top: 7px;
+                                width: 100%;
+                                max-width: 265px;
+                            }
+
+                            p {
+                                margin-top: 4px;
+                                margin-bottom: 0px;
+                                font-weight: 300;
+                            }
+
+                            a {
+                                margin-top: 32px;
+                                margin-left: auto;
+                                margin-right: auto;
+                            }
+                        }
+
+                        .image {
+                            margin-top: 51px;
+                            margin-top: 51px;
+                            margin-left: auto;
+                            margin-right: auto;
+                            padding: 0 20px;
+
+                            //width: 100vw;
+                        }
                     }
                 }
             }
         }
     }
 }
+
 // Ecrans larges (desktops, en-dessous de 1040px)
-@media (max-width: 1039.98px) {
+
+@media (max-width: 1099.98px) {
+    header {
+        nav {
+            &.nav-1 {
+                display: none;
+            }
+
+            &.nav-2 {
+                display: flex;
+            }
+        }
+    }
+
     main {
         .main-item {
             &.first {
-                .avantages {
-                    &:before {
-                        height: 400px;
-                        top: -140px;
-                    }
+                #avantages {
+                    width: 100%;
                 }
             }
         }
     }
 }
+
+@media (max-width: 1039.98px) {
+    main {
+        #rejoindre {
+            .illustration-flottante {
+                width: 300px;
+                top: 50px;
+                left: 25px;
+
+            }
+        }
+    }
+}
+
 // Ecrans larges (desktops, en-dessous de 1024px)
 @media (max-width: 1023.98px) {
     header {
@@ -65,41 +141,49 @@
             top: 20%;
         }
     }
+
     main {
         .main-item {
             &.first {
                 .avantages {
                     padding: 0 10%;
                     align-items: center;
+
                     &:before {
                         height: 100%;
                         background-size: 200%;
                     }
+
                     &:after {
                         height: 100%;
                         background-size: 200%;
                         bottom: 150px;
                     }
+
                     img {
                         order: 2;
                         width: 100%;
                         max-width: 500px;
                         margin: 0;
                     }
+
                     div {
                         order: 1;
                         width: 100%;
                         max-width: 500px;
                         margin-bottom: 80px;
                         align-items: center;
+
                         .titre {
                             width: 100%;
                             text-align: left;
                         }
+
                         span {
                             display: inline-block;
                             width: 100%;
                         }
+
                         a {
                             text-align: center;
                         }
@@ -111,42 +195,56 @@
 }
 
 // Ecrans moyens (tablettes, en-dessous de 992px)
-@media (max-width: 991.98px) {
-    
-}
 
 @media (max-width: 859.98px) {
-    header {
-        nav {
-            &.nav-1 {
-                display: none;
-            }
-            &.nav-2 {
-                display: flex;
-            }
-        }
-    }
     main {
         .main-item {
             &.first {
                 margin-bottom: 100px;
+
                 .valeurs {
                     .valeurs-cartes {
                         flex-direction: column;
                         padding: 30px;
                         height: auto;
+
+                        section {
+                            &.valorisation {
+                                position: static;
+                            }
+
+                            .tiktok {
+                                position: relative;
+                                bottom: 0;
+
+                                &:last-of-type {
+                                    bottom: 80px;
+                                }
+                            }
+
+                            &:before {
+                                top: -120px;
+                            }
+                        }
                     }
                 }
+
+                #video {
+                    margin-top: 0px;
+                }
+
                 .illustration-flottante-2 {
                     &:nth-child(5) {
                         right: -70px;
                         bottom: 1550px;
                         transform: rotate(190deg) scale(1.5);
                     }
+
                     &:nth-child(6) {
                         display: none;
 
                     }
+
                     &:nth-child(7) {
                         display: none;
                     }
@@ -154,28 +252,38 @@
             }
         }
     }
+
     footer {
+        .vague {
+            bottom: 200px;
+        }
+
         .footer-content {
             padding-left: 60px;
             flex-wrap: wrap;
             justify-content: center;
+
             section {
                 &.footer-information {
                     width: 40%;
                 }
+
                 &.footer-contact {
                     width: 80%;
                     order: 3;
                 }
+
                 &.footer-social-media {
                     width: 40%;
+
                     div {
                         padding-right: 0;
                         flex-wrap: wrap;
+
                         a {
                             padding: 0 25px 25px 0;
                         }
-                    }                    
+                    }
                 }
             }
         }
@@ -189,26 +297,12 @@
             padding-bottom: 300px;
         }
     }
+
     main {
-        .main-item {
-            &.first {
-                .avantages {
-                    &:before {
-                        height: 100%;
-                        background-size: 300%;
-                        background-position-x: 80%;
-                        top: -250px;
-                    }
-                    &:after {
-                        height: 100%;
-                        background-size: 300%;
-                        bottom: 100px;
-                    }
-                }
-            }
-        }
+        
     }
 }
+
 @media (max-width: 588.98px) {
     main {
         .main-item {
@@ -217,19 +311,16 @@
                     top: -9%;
                     right: -10%;
                 }
-                .avantages {
-                    &:before {
-                        height: 100%;
-                        background-size: 500%;
-                        background-position-x: 80%;
-                        top: -260px;
-                    }
-                    &:after {
-                        height: 100%;
-                        background-size: 500%;
-                        bottom: 100px;
+
+                #avantages {
+                    img {
+                        &.perso {
+                            width: 300px;
+                            right: -100px;
+                        }
                     }
                 }
+
                 .illustration-flottante-2 {
                     &:nth-child(5) {
                         right: -200px;
@@ -240,6 +331,7 @@
         }
     }
 }
+
 // Petits écrans (mobile portrait, en-dessous de 576px)
 @media (max-width: 575.98px) {
     header {
@@ -249,6 +341,7 @@
             }
         }
     }
+
     main {
         .main-item {
             &.first {
@@ -258,21 +351,30 @@
             }
         }
     }
+
     footer {
+        .vague {
+            bottom: 400px;
+        }
+
         &:before {
             background-size: 200%;
         }
+
         .footer-content {
             flex-direction: column;
             align-items: center;
+
             section {
                 width: 75% !important;
                 margin-bottom: 25px;
                 display: flex;
                 flex-direction: column;
+
                 &.footer-social-media {
                     div {
                         margin: 16px 0;
+
                         a {
                             padding-bottom: 0;
                         }
@@ -282,6 +384,7 @@
         }
     }
 }
+
 @media (max-width: 475.98px) {
     main {
         .main-item {
