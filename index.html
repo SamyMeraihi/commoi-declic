@@ -1,83 +1,108 @@
 <!DOCTYPE html>
 <html lang="fr">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="description" content="But du site">
-        <meta name="keywords" content="Mots clés pour le site">
-        <meta name="author" content="Com'Moi">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
-        <link rel="icon" href="img/favicon.png">
-        <link rel="stylesheet" href="css/main.css">
-        
-        <script type="text/javascript">
-            
-        </script>
 
-        <title>Déclic</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="But du site">
+    <meta name="keywords" content="Mots clés pour le site">
+    <meta name="author" content="Com'Moi">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <!-- Global site tag (gtag.js) - Google Analytics -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-X3YHM63MPV%22%3E"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            
-            gtag('config', 'G-X3YHM63MPV');
-        </script>
-    </head>
-    <body>
-        <!-- header -->
-        <header>
-            <img alt="" src="img/illust_persoassis_1.png" class="illustration-flottante">
-            <nav class="nav-1 d-flex space-between">
-                <a href="#" class="nav-logo"><img alt="logo-declic" src="img/logo-declic.png"></a>
-                <!-- <p class="demo-logo">Logo</p> -->
-                <div class="d-flex">
-                    <ul>
-                        <li><a href="#">Pour les lycéens</a></li>
-                        <li><a href="#">L'entrepreneuriat</a></li>
-                        <li><a href="#">Pour les établissements</a></li>
-                    </ul>
-                    <a class="cta-newsletter" href="#">Newsletter</a>
-                </div>
-            </nav>
-            <nav class="nav-2 d-flex">
-                <svg class="burger burger-off">
-                    <rect/>
-                    <rect/>
-                    <rect/>
-                </svg>
-                <a href="#" class="nav-logo"><img alt="logo-declic" src="img/logo-declic.png"></a>
-                <svg class="arrow">
-                    <rect x="2" y="6"/>
-                    <rect x="23" y="7"/>
-                </svg>
-            </nav>
-            <div class="dropdown d-flex flex-column">
-                <ul class="d-flex flex-column">
-                    <li><a href="#">Pour les étudiants</a></li>
-                    <li><a href="#">Pour les lycées</a></li>
+    <link rel="icon" href="img/favicon.png">
+    <link rel="stylesheet" href="css/main.css">
+
+    <script type="text/javascript">
+
+    </script>
+
+    <title>Déclic</title>
+    <!-- Jquery -->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-X3YHM63MPV%22%3E"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-X3YHM63MPV');
+    </script>
+    <!-- scripts js -->
+    <script type="text/javascript" src="js/script.js"></script>
+</head>
+
+<body>
+
+    <!-- header -->
+    <header>
+        <nav class="nav-1 d-flex space-between">
+            <a onClick="return scrollToTarget('rejoindre')" href="#" class="nav-logo"><img alt="logo-declic"
+                    src="img/logo-declic.png"></a>
+            <!-- <p class="demo-logo">Logo</p> -->
+            <div class="d-flex">
+                <ul>
+                    <li><a onClick="return scrollToTarget('avantages', -460)" href="#">Pour les lycéens</a></li>
+                    <li><a onClick="return scrollToTarget('video', -300)" href="#">L'entrepreneuriat</a></li>
+                    <li><a onClick="return scrollToTarget('etablissement', 100)" href="#">Pour les établissements</a>
+                    </li>
                 </ul>
-                <a class="cta-newsletter" href="#">Newsletter</a>
+                <a onClick="return scrollToTarget('formulaire', -200)" class="cta cta-newsletter"
+                    href="#">Newsletter</a>
             </div>
+        </nav>
+        <nav class="nav-2 d-flex">
+            <svg class="burger burger-off">
+                <rect />
+                <rect />
+                <rect />
+            </svg>
+            <a href="#" class="nav-logo"><img alt="logo-declic" src="img/logo-declic.png"></a>
+            <svg class="arrow">
+                <rect x="2" y="6" />
+                <rect x="23" y="7" />
+            </svg>
+        </nav>
+        <div class="dropdown d-flex flex-column">
+            <ul class="d-flex flex-column">
+                <li><a href="#">Pour les étudiants</a></li>
+                <li><a href="#">Pour les lycées</a></li>
+            </ul>
+            <a class="cta-newsletter" href="#">Newsletter</a>
+        </div>
+
+    </header>
+
+    <!-- main -->
+    <main>
+        <div class="background"></div>
+        <section id="rejoindre">
+            <img alt="" src="img/illust_persoassis_1.png" class="illustration-flottante">
             <div class="d-flex flex-column header-bg">
                 <h1 class="titre titre-violet">Rejoins Déclic et trouves ton chemin</h1>
-                <a class="cta cta-violet" href="#">Abonne-toi</a>
-                <a class="more" href="">Viens te renseigner</a>
+                <a class="cta cta-violet" onClick="return scrollToTarget('formulaire')" href="#">Abonne-toi</a>
+                <p class="more" href="">Viens te renseigner</p>
+                <img class="yellowArrow" alt="" src="img/flecheyellow.png">
             </div>
-        </header>
-        <!-- main -->
-        <main>
+        </section>
+
+
+        <!-- Conteneur principal -->
+        <div class="conteneur_principal">
             <div class="main-item first">
-                <img alt="" src="img/illust_perso_1.png" class="illustration-flottante">
-                <section class="avantages d-flex">
-                    <img alt="" src="img/declic-jeunes.jpeg">
+
+                <section id="avantages" class="d-flex">
+                    <img alt="" src="img/purple-wave-1.svg" class="vague">
+                    <img alt="" src="img/illust_perso_1.png" class="perso">
+                    <img alt="" src="img/declic-jeunes.jpeg" class="image">
                     <div class="d-flex flex-column">
                         <h2 class="titre titre-canari">Lycéen&nbsp;! Déclic t'informe</h2>
-                        <span class="sous-titre">Avec Déclic, y'a plus de secrets. Découvre les avantages de montrer ta boîte.</span>
-                        <p>Taffer c'est pas juste gratter du papier, c'est aussi avoir ton propre plan et kiffer. Rejoins Déclic pour savoir comment y arriver !</p>
-                        <!--<a href="#" class="cta cta-jaune">S'informer</a>-->
+                        <span class="sous-titre">Avec Déclic, y'a plus de secrets. Découvre les avantages de montrer ta
+                            boîte.</span>
+                        <p>Taffer c'est pas juste gratter du papier, c'est aussi avoir ton propre plan et kiffer.
+                            Rejoins
+                            Déclic pour savoir comment y arriver !</p>
+                        <a class="cta cta-violet" href="#">S'informer</a>
                     </div>
                 </section>
                 <section class="valeurs d-flex flex-column">
@@ -86,9 +111,13 @@
                         <section class="information d-flex flex-column">
                             <img alt="" src="img/icon-information.png">
                             <h3 class="titre titre-violet">Information</h3>
-                            <p>Tu veux savoir comment monter te boîte&nbsp;?</p>
+                            <p>Tu veux savoir comment monter ta boîte&nbsp;?</p>
                             <div class="separateur"></div>
                             <p>On est là pour toi&nbsp;!</p>
+                            <img class="tiktok" alt="" src="img/tiktok_purple.svg"
+                                onclick="window.open('https://vm.tiktok.com/ZM8WaLA4T/')">
+                            <img class="tiktok" alt="" src="img/tiktok_yellow.svg"
+                                onclick="window.open('https://vm.tiktok.com/ZM8WaLA4T/')">
                         </section>
                         <section class="valorisation d-flex flex-column">
                             <img alt="" src="img/icon-valorisation.png">
@@ -96,6 +125,10 @@
                             <p>Ton projet a une importance à tes yeux&nbsp;?</p>
                             <div class="separateur"></div>
                             <p>Pour nous aussi&nbsp;!</p>
+                            <img class="tiktok" alt="" src="img/tiktok_purple.svg"
+                                onclick="window.open('https://vm.tiktok.com/ZM8WadA2Y/')">
+                            <img class="tiktok" alt="" src="img/tiktok_yellow.svg"
+                                onclick="window.open('https://vm.tiktok.com/ZM8WaLA4T/')">
                         </section>
                         <section class="accompagnement d-flex flex-column">
                             <img alt="" src="img/icon-accompagnement.png">
@@ -103,71 +136,100 @@
                             <p>Raconte-nous tes rêves les plus fous</p>
                             <div class="separateur"></div>
                             <p>On veut y participer&nbsp;!</p>
+                            <img class="tiktok" alt="" src="img/tiktok_purple.svg"
+                                onclick="window.open('https://vm.tiktok.com/ZM8WarR5e/')">
+                            <img class="tiktok" alt="" src="img/tiktok_yellow.svg"
+                                onclick="window.open('https://vm.tiktok.com/ZM8WaLA4T/')">
                         </section>
                     </div>
                 </section>
 
-                <!-- METTRE LA VIDEO ICI !!! -->
-                <!-- <video></video> -->
+                <div id="video">
+                    <!--<iframe width="1280" height="720" src="https://www.youtube.com/embed/4qCQTdkePWo"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>-->
+                    <img alt="" src="img/video-preview-maquette-fullvisuel.png">
 
-                <section class="etablissement d-flex flex-column">
-                    <h2 class="titre titre-violet">Vos étudiants ont besoin de votre soutien pour leur épanouissement personnel et professionnel&nbsp;!&nbsp;!</h2>
-                    <p>Vous êtes un établissement scolaire et vous souhaitez transmettre les valeurs de l'entrepreneuriat auprès de vos lycéens,</p>
+                </div>
+
+                <section id="etablissement" class="d-flex flex-column">
+                    <img alt="" src="img/forme-declic-forme modules-3.svg" class="illustration-flottante forme1">
+                    <img alt="" src="img/illust_persoassis2.png" class="illustration-flottante perso1">
+                    <img alt="" src="img/illust_crayon.png" class="illustration-flottante perso2">
+                    <img alt="" src="img/forme-modules-2.svg" class="illustration-flottante forme2">
+                    <h2 class="titre titre-violet">Vos étudiants ont besoin de votre soutien pour leur épanouissement
+                        personnel et professionnel !</h2>
+                    <p>Vous êtes un établissement scolaire et vous souhaitez transmettre les valeurs de
+                        l'entrepreneuriat
+                        auprès de vos lycéens,</p>
                     <p>Prenez contact avec l'APEF. (Association de Promotion de l'Entrepreneuriat Français)</p>
-                    <p></p>
-                    <a class="cta" href="#">Contactez-nous</a>
+                    <a class="cta" href="mailto:contact@declic.fr" target="_blank">Contactez-nous</a>
+
                 </section>
-                <img alt="" src="img/forme-modules-2.svg" class="illustration-flottante-2">
-                <img alt="" src="img/illust_persoassis2.png" class="illustration-flottante-2">
-                <img alt="" src="img/illust_crayon.png" class="illustration-flottante-2">
-                
-            </div>
-            <div class="main-item second d-flex flex-column">
-                <div class="demo-video d-flex"></div>
-                <div class="formulaire d-flex flex-column">
-                    <h2 class="titre titre-violet"> N'en perds pas une miette, abonne-toi</h2>
-                    <img alt="" src="img/flecheyellow.png">
-                    <img alt="" src="img/illust_persocomputer.png">
-                    <h2 class="titre titre-violet"> ...et abonnez-vous à la Newsletter</h2>
-                    <!-- <div class="demo-illustration d-flex"><span>Illustration</span></div> -->
-                    <form  action="https://gmail.us20.list-manage.com/subscribe/post?u=4cbbbdc22db0901fe66449e88&amp;id=b7de80ac0b" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="d-flex validate" target="_blank" novalidate>
-                        <input type="email" name="EMAIL" class="email" id="mce-EMAIL" placeholder="elon@spacex.com" required>
+
+                <section id="formulaire" class="d-flex flex-column">
+                    <h2 class="titre titre-violet"> N'en perds pas une miette...</h2>
+                    <img class="yellowArrow" alt="" src="img/flecheyellow.png">
+                    <img class="illustration-flottante" alt="" src="img/illust_persocomputer.png">
+                    <h2 class="titre titre-violet"> et abonne-toi !</h2>
+                    <form
+                        action="https://gmail.us20.list-manage.com/subscribe/post?u=4cbbbdc22db0901fe66449e88&amp;id=b7de80ac0b"
+                        method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form"
+                        class="d-flex validate" target="_blank" novalidate>
+                        <input type="email" name="EMAIL" class="email" id="mce-EMAIL" placeholder="elon@spacex.com"
+                            required>
                         <input type="submit" value="Envoyer" name="subscribe" id="mc-embedded-subscribe" class="button">
                     </form>
+                </section>
+
+                <section class="instagram d-flex flex-column">
+                    <h2 class="titre titre-violet">Retrouve nous sur insta </h2>
+                    <p>#Entreprendre #money #Déclic #Ecole</p>
+                    <a class="cta" href="https://www.instagram.com/declic.apef/" target="_blank">Follow</a>
+                </section>
+
+            </div>
+    </main>
+
+
+    <!-- footer -->
+    <footer class="d-flex flex-column">
+        <img alt="" src="img/purple-wave-2.svg" class="vague">
+        <div class="footer-content d-flex">
+            <section class="footer-information">
+                <h2 class="titre titre-footer">Informations</h2>
+                <ul>
+                    <li class="d-flex"><a href="#">Pour les étudiants</a></li>
+                    <li class="d-flex"><a href="#">Pour les lycées</a></li>
+                    <li class="d-flex"><a href="#">Newsletter</a></li>
+                </ul>
+            </section>
+            <section class="footer-contact">
+                <h2 class="titre titre-footer">Contact</h2>
+                <ul>
+                    <li class="d-flex"><a href="https://goo.gl/maps/zFTsiY8oXHkMnT629" target="_blank">8 bis Rue de
+                            la
+                            Fontaine au Roi 75011 Paris</a></li>
+                    <li class="d-flex"><a href="tel:0678989910">06 78 98 99 10</a></li>
+                    <li class="d-flex"><a href="mailto:contact@declic.fr" target="_blank">contact@declic.fr</a></li>
+                </ul>
+            </section>
+            <section class="footer-social-media">
+                <h2 class="titre titre-footer">Social Media</h2>
+                <div class="d-flex">
+                    <a href="https://www.facebook.com/profile.php?id=100075083631228" target="_blank"><img alt=""
+                            src="img/facebook.svg"></a>
+                    <a href="https://www.instagram.com/declic.apef/" target="_blank"><img alt=""
+                            src="img/instagram.svg"></a>
+                    <a href="https://www.tiktok.com/@declic.apef?lang=fr" target="_blank"><img alt=""
+                            src="img/tiktok.svg"></a>
                 </div>
-            </div>
-        </main>
-        <!-- footer -->
-        <footer class="d-flex flex-column">
-            <div class="footer-content d-flex">
-                <section class="footer-information">
-                    <h2 class="titre titre-footer">Informations</h2>
-                    <ul>
-                        <li class="d-flex"><a href="#">Pour les étudiants</a></li>
-                        <li class="d-flex"><a href="#">Pour les lycées</a></li>
-                        <li class="d-flex"><a href="#">Newsletter</a></li>
-                    </ul>
-                </section>
-                <section class="footer-contact">
-                    <h2 class="titre titre-footer">Contact</h2>
-                    <ul>
-                        <li class="d-flex"><a href="https://goo.gl/maps/zFTsiY8oXHkMnT629" target="_blank">8 bis Rue de la Fontaine au Roi 75011 Paris</a></li>
-                        <li class="d-flex"><a href="tel:0678989910">06 78 98 99 10</a></li>
-                        <li class="d-flex"><a href="mailto:contact@declic.fr" target="_blank">contact@declic.fr</a></li>
-                    </ul>
-                </section>
-                <section class="footer-social-media">
-                    <h2 class="titre titre-footer">Social Media</h2>
-                    <div class="d-flex">
-                        <a href="https://www.facebook.com/profile.php?id=100075083631228" target="_blank"><img alt="" src="img/facebook.svg"></a>
-                        <a href="https://www.instagram.com/declic.apef/" target="_blank"><img alt="" src="img/instagram.svg"></a>
-                        <a href="https://www.tiktok.com/@declic.apef?lang=fr" target="_blank"><img alt="" src="img/tiktok.svg"></a>
-                    </div>
-                </section>
-            </div>
-            <p class="copyright">© 2021 com'moi - tous droits réservés</p>
-        </footer>
-        <!-- scripts js -->
-        <script type="text/javascript" src="js/script.js"></script>
-    </body>
+            </section>
+        </div>
+        <p class="copyright">© 2021 com'moi - tous droits réservés</p>
+    </footer>
+    </div>
+</body>
+
 </html>

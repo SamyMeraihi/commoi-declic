@@ -7,23 +7,26 @@
 * {
     box-sizing: border-box;
 }
+html,
+body {
+    height: auto;
+    min-height: 100%;
+}
+
 html {
-    overflow: hidden;
-    height: 100%;
+    overflow: auto;
+    cursor: url("../img/cursor-purple.svg"), auto;
 }
 body {
-    height: 100%;
-    overflow: auto;
-    overflow-x: hidden;
     position: relative;
     margin: 0;
     padding: 0;
-    font-family: 'Work Sans', sans-serif;
+    font-family: "Work Sans", sans-serif;
     font-weight: 400;
     color: $noir;
 }
 .titre {
-    font-family: 'Quicksand', sans-serif;
+    font-family: "Quicksand", sans-serif;
     font-weight: 700;
     line-height: 100%;
     &.titre-violet {
@@ -55,17 +58,20 @@ a {
     text-decoration: none;
     color: unset;
     &.cta {
-        padding: 20px 50px;
+        transition: 0.4s ease;
+        height: 64px;
+        width: 215px;
+        line-height: 64px;
+        text-align: center;
         border: 1px solid $violet;
         border-radius: 40px;
         color: $violet;
-        font-size: 1rem;
+        font-size: 18px;
         font-weight: 700;
         &.cta-violet {
             background: $violet;
             color: $canari;
             border: none;
-            transition: .4s ease;
             &:hover {
                 background-color: $canari;
                 color: $violet;
@@ -76,40 +82,11 @@ a {
             color: $canari;
             border: 1px solid $canari;
             margin-top: 20px;
-            transition: .4s ease;
             &:hover {
                 background: $canari;
                 color: $violet;
             }
         }
-    }
-    &.cta-newsletter {
-        padding : 6px 20px;
-        border-radius: 20px;
-        background-color: $creme;
-        border: 1px solid $violet;
-        color: $violet;
-        transition: .4s ease;
-        &:hover {
-            text-shadow:
-            -.5px -.5px 0 $violet,
-            .5px -.5px 0 $violet,
-            -0px 0px 0 $violet,
-            0px 0px 0 $violet;
-        }
-        /*
-        &:hover {
-            font-weight: 700;
-        }
-        
-        OU
-        
-        &:hover {
-            background-color: $canari;
-            color: $violet;
-            border: 1px solid $creme;
-        }
-        */
     }
 }
 .d-none {
@@ -131,193 +108,347 @@ main {
     position: relative;
     z-index: 2;
     padding: 0 0 100px 0;
-    .main-item {
-        &:not(:last-child) {
-            padding-bottom: 50px;
+    overflow-x: hidden;
+
+    .background {
+        background-color: #fcfbea;
+        height: 100vh;
+        position: absolute;
+        width: 100vw;
+    }
+    #rejoindre {
+        height: 100vh;
+        background-color: $creme;
+        padding-top: 45vh;
+        position: relative;
+
+        width: 1440px;
+        margin-left: auto;
+        margin-right: auto;
+
+        .illustration-flottante {
+            position: absolute;
+            width: 436px;
+            height: 415px;
+            top: 186px;
+            left: 110px;
+            transform: rotate(10deg);
         }
+        h1 {
+            margin: 0px;
+        }
+        .cta-violet {
+            margin-top: 29px;
+        }
+        .more {
+            margin-top: 49px;
+        }
+        .yellowArrow {
+            transform: rotate(55deg);
+            margin-top: 40px;
+        }
+    }
+    .main-item {
+        max-width: 1440px;
+        margin-left: auto;
+        margin-right: auto;
         &.first {
-            margin-bottom: 350px;
-            .illustration-flottante {
-                position: absolute;
-                width: 350px;
-                top: -11%;
-                right: 5%;
-                transform: rotate(5deg);
-            }
-            > section {
-                &:not(:last-of-type) {
-                    padding-bottom: 80px;
+            #video {
+                margin-top: 200px;
+                text-align: center;
+                &iframe {
+                    width: 1320px;
+                    height: 740px;
                 }
-            }
-            .avantages {
-                position: relative;
-                flex-wrap: wrap;     
-                align-items: flex-start;
-                &:before {
-                    content: "";
-                    display: block;
-                    width: 100%;
-                    height: 500px;
-                    position: absolute;
-                    z-index: -1;
-                    top:-199px;
-                    background-image: url("../img/forme-module-3-horizontale.svg");
-                    background-size: 120%;
-                    background-position-x: center;
-                    background-repeat: no-repeat;
-                }
-                &:after {
-                    content: "";
-                    display: block;
-                    width: 100%;
-                    height: 500px;
-                    position: absolute;
-                    z-index: -1;
-                    bottom: -130px;
-                    background-image: url("../img/forme-module-3-horizontale.svg");
-                    background-position: bottom;
-                    background-position-x: center;
-                    background-size: 120%;
-                    background-repeat: no-repeat;
-                }
+
                 img {
-                    width: 450px;
-                    height: 400px;
-                    min-height: 350px;
-                    margin: 0 40px 0 0;
+                    // A changer une fois qu'on a la vidéo !
+                    width: 1320px;
+                    height: 740px;
+                }
+            }
+
+            #avantages {
+                position: relative;
+                flex-wrap: wrap;
+                align-items: flex-start;
+                z-index: 1;
+                .vague {
+                    position: absolute;
+                    width: 1925px;
+                    height: 950px;
+                    min-width: 1925px;
+                    top: -194px;
+                    z-index: -1;
+                }
+
+                .image {
+                    width: 457px;
+                    height: 379px;
                     border-radius: 50px;
                     object-fit: cover;
                 }
+
+                .perso {
+                    position: absolute;
+                    width: 444px;
+                    height: 415px;
+                    top: -353px;
+                    right: 49.5px;
+                    transform: rotate(6deg);
+                }
+
                 div {
-                    width: 30%;
+                    width: 481px;
+                    margin-left: 58px;
                     color: $blanc;
                     align-items: flex-start;
-                    .cta-jaune {
-                        margin-top:20px;
+                    align-self: end;
+
+                    h2 {
+                        margin-bottom: 10px;
+                        margin-top: 0px;
+                        font-size: 30.5px;
+                        line-height: 38px;
+                    }
+                    span {
+                        line-height: 28px;
+                    }
+                    p {
+                        width: 417px;
+                        font-size: 16px;
+                        line-height: 19px;
+                        font-weight: 300;
+                        font-style: italic;
+                    }
+                    a {
+                        margin-top: 44px;
+                        margin-left: 72px;
+                        background-color: $violet;
+                        border: 1px solid $canari;
+                        &:hover {
+                            background-color: $canari;
+                            color: $violet;
+                        }
                     }
                 }
             }
             .valeurs {
+                margin-top: 188px;
                 h2 {
-                    margin: 60px 0;
+                    margin-top: 0px;
+                    margin-bottom: 0px;
                 }
                 .valeurs-cartes {
+                    margin-top: 100px;
                     section {
                         max-width: 350px;
-                        padding: 50px 30px;
                         position: relative;
-                        
-                        &.information {
+                        &.information:before {
+                            content: "";
+                            display: block;
+                            width: 600px;
+                            height: 400px;
+                            margin-top: 50px;
+                            position: absolute;
+                            z-index: -1;
+                            background-size: 400px 425px;
                             background-image: url("../img/forme-declic-forme-modules.png");
-                            background-size: cover;
+                            background-position-x: center;
+                            background-repeat: no-repeat;
                         }
-                        
-                        &.accompagnement {
+                        &.valorisation {
+                            margin-left: 120px;
+                            margin-right: 120px;
+                        }
+                        &.accompagnement:before {
+                            content: "";
+                            display: block;
+                            width: 600px;
+                            height: 400px;
+                            margin-top: 50px;
+                            position: absolute;
+                            z-index: -1;
+                            background-size: 400px 425px;
                             background-image: url("../img/forme-declic-forme-modules-2.png");
-                            background-size: cover;
+                            background-position-x: center;
+                            background-repeat: no-repeat;
                         }
 
                         img {
                             width: 80px;
+                            height: 80px;
+                        }
+                        .tiktok {
+                            width: 70px;
+                            height: 60px;
+                            margin-top: 20px;
+                            position: absolute;
+                            bottom: -80px;
+                            &:last-of-type {
+                                opacity: 0;
+                                transition: 0.2s ease;
+                                &:hover {
+                                    opacity: 1;
+                                }
+                            }
+                            &:hover {
+                                cursor: url("../img/cursor-yellow.png"), default;
+                                opacity: 1;
+                            }
                         }
                         h3 {
-                            margin: 15px 0;
+                            margin-top: 18px;
+                            margin-bottom: 0px;
+                            font-family: Quicksand;
+                            font-weight: bold;
+                            font-size: 24px;
+                            line-height: 30px;
                         }
                         .separateur {
                             width: 20px;
                             height: 1px;
-                            margin: 10px 0;
+                            margin-top: 12px;
+                            margin-bottom: 0px;
                             background-color: $noir;
                         }
                         p {
-                            margin: 0;
-                            padding: 0 15px;
+                            margin-top: 8px;
+                            margin-bottom: 0px;
+                            font-family: Work Sans;
+                            font-style: normal;
+                            font-weight: 300;
+                            font-size: 16px;
+                            line-height: 19px;
                             text-align: center;
-                            font-size: 1rem;
+                            width: 200px;
                         }
                     }
                 }
             }
-            .etablissement {
-                max-width: 600px;
-                margin: auto;
-                > * {
+            #etablissement {
+                position: relative;
+                .illustration-flottante {
+                    position: absolute;
+
+                    &.perso1 {
+                        transform: rotate(10.58deg);
+                        width: 373px;
+                        height: 428px;
+                        left: 59px;
+                        top: 87px;
+                    }
+
+                    &.forme1 {
+                        width: 1100px;
+                        height: 1166px;
+                        left: -415px;
+                        top: -140px;
+                        z-index: -1;
+                        transform: rotate(-4deg);
+                    }
+
+                    &.perso2 {
+                        width: 278px;
+                        height: 264px;
+                        right: 59px;
+                        top: 199px;
+                    }
+
+                    &.forme2 {
+                        transform: rotate(-161deg);
+                        width: 590px;
+                        height: 531px;
+                        right: -139px;
+                        top: -3px;
+                        z-index: -1;
+                    }
+                }
+                h2 {
+                    width: 700px;
+                    margin-top: 550px;
+                    margin-bottom: 0px;
+                    font-family: Quicksand;
+                    font-style: normal;
+                    font-weight: bold;
+                    font-size: 28px;
+                    line-height: 35px;
                     text-align: center;
                 }
                 p {
-                    margin: 40px 0 30px 0;
-                    font-style: italic;
-                    font-size: 1rem;
+                    font-family: Work Sans;
+                    font-style: normal;
+                    font-weight: 300;
+                    font-size: 24px;
+                    line-height: 28px;
+                    text-align: center;
+
+                    &:first-of-type {
+                        width: 760px;
+                        margin-top: 20px;
+                        margin-bottom: 0px;
+                    }
+
+                    &:last-of-type {
+                        width: 760px;
+                        margin-top: 40px;
+                        margin-bottom: 0px;
+                    }
                 }
                 a {
-                    transition: .4s ease;
+                    margin-top: 31px;
                     &:hover {
                         background-color: $violet;
                         color: $blanc;
                     }
                 }
             }
-            .illustration-flottante-2 {
-                width: 300px;
-                position: absolute;
-                z-index: -1;
-                object-fit: contain;
-                &:nth-child(5) {
-                    right: 0;
-                    bottom: 1500px;
-                    transform: rotate(200deg) scale(2);
-                }
-                &:nth-child(6) {
-                    left: 50px;
-                    transform: rotate(15deg);
-                }
-                &:nth-child(7) {
-                    right: 50px;
-                }
-            }
-        }
-        &.second {
-            width: 100vw;
-            max-width: 720px;
-            margin: auto;
-            position: relative;
-            > div {
-                width: 100%;
-                &.demo-video {
-                    height: 407px;
-                }
-            }
-            .demo-video {
+
+            #formulaire {
+                width: 100vw;
+                max-width: 720px;
+                margin-top: 115px;
+                margin-left: auto;
+                margin-right: auto;
                 position: relative;
-                text-align: center;
-                text-transform: uppercase;
-                background-image: url("../img/video-preview-maquette-fullvisuel.png");
-                background-size: cover; 
-            }
-            h2 {
-                margin: 80px 0;
-            }
-            .formulaire {
-                padding: 0 80px;
-                margin-bottom: 150px;
-                h2 {                    
-                    margin-bottom: 25px;
-                    &:nth-child(4) {
-                        margin-top: 60px;
-                    }
-                }
-                img {
-                    max-width: 250px;
-                    &:nth-child(2) {
-                        position: relative;
-                        left: 20%;
-                        margin: 30px 0;
-                        max-width: 100px;
-                        transform: rotate(55deg);
-                    }
-                }
-                form {
+                > div {
                     width: 100%;
+                }
+                h2 {
+                    font-family: Quicksand;
+                    font-style: normal;
+                    font-weight: bold;
+                    font-size: 28px;
+                    line-height: 35px;
+                    text-align: center;
+                    &:first-of-type {
+                        width: 392px;
+                        height: 35px;
+                        margin-top: 0px;
+                        margin-bottom: 0px;
+                    }
+                    &:last-of-type {
+                        width: 205px;
+                        height: 35px;
+                        margin-top: 51px;
+                        margin-bottom: 0px;
+                    }
+                }
+                .yellowArrow {
+                    position: absolute;
+                    top: 75px;
+                    right: 210px;
+                    transform: rotate(55deg);
+                }
+                .illustration-flottante {
+                    width: 217px;
+                    height: 172px;
+                    margin-top: 114px;
+                }
+
+                form {
+                    margin-top: 30px;
+                    width: 545px;
                     input {
                         height: 77px;
                         margin: 0;
@@ -334,7 +465,7 @@ main {
                                 color: $noir;
                                 opacity: 0.2;
                             }
-                            transition: .4s ease;
+                            transition: 0.4s ease;
                             &:hover {
                                 box-shadow: 0px 0px 8px 0px $mauve;
                             }
@@ -351,19 +482,48 @@ main {
                             font-size: 18px;
                             font-weight: 700;
                             color: $canari;
-                            transition: .4s ease;
+                            transition: 0.4s ease;
                             &:hover {
                                 background-color: $creme;
                                 color: $violet;
-                                cursor: pointer;
+                                cursor: url("../img/cursor-yellow.png"), default;
                             }
                         }
+                    }
+                }
+            }
+            .instagram {
+                margin-top: 115px;
+                h2 {
+                    margin-top: 0px;
+                    margin-bottom: 0px;
+
+                    font-family: Quicksand;
+                    font-style: normal;
+                    font-weight: bold;
+                    font-size: 28px;
+                    line-height: 35px;
+                }
+                p {
+                    margin-top: 19px;
+                    font-family: Work Sans;
+                    font-style: normal;
+                    font-weight: 300;
+                    font-size: 24px;
+                    line-height: 28px;
+                }
+                a {
+                    margin-top: 51px;
+                    &:hover {
+                        color: $blanc;
+                        background-color: $violet;
                     }
                 }
             }
         }
     }
 }
+
 // Import templates & composants
 @import "header";
 @import "footer";
