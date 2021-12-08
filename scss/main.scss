@@ -10,12 +10,10 @@
 
 html {
     height: 100%;
-    overflow: hidden;
     cursor: url("../img/cursor-purple.svg"), auto;
 }
 body {
     height: 100%;
-    overflow: auto;
     overflow-x: hidden;
     position: relative;
     margin: 0;
@@ -201,8 +199,7 @@ main {
                         transform: rotate(6deg);
                     }
                 }
-                .container
-                {
+                .container {
                     display: flex;
                     flex-direction: row;
                 }

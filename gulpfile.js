@@ -10,5 +10,8 @@ gulp.task('buildStyles', function () {
 
 // Watcher qui surveille les modifications des fichiers dans le dossier /scss
 gulp.task('watch', function () {
-  gulp.watch('./scss/*.scss', gulp.parallel('buildStyles'));
+  return new Promise(function (resolve, reject) {
+    gulp.watch('./scss/*.scss', gulp.parallel('buildStyles'));
+    resolve();
+  });
 })
