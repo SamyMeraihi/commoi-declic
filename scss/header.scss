@@ -1,16 +1,35 @@
 header {
     background-color: $creme;
+    a {
+        font-family: Work Sans;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 12px;
 
+        &.cta-newsletter {
+            width: 150px;
+            height: 50px;
+            line-height: 50px;
+            background-color: $creme;
+            color: $violet;
+            &:hover {
+                background-color: $canari;
+                border-color: $canari;
+                color: $violet;
+            }
+        }
+    }
     .dropdown {
         position: fixed;
         top: -50px;
         opacity: 0;
         left: 0;
-        z-index: -98;
+        z-index: -1;
         background: $creme;
         width: 100vw;
         height: 100vh;
-        transition: 0.8s ease;
+        transition: .8s ease;
 
         &.dropdown-on {
             position: fixed;
@@ -36,28 +55,6 @@ header {
         &.nav-1 {
             padding: 0 80px;
             justify-content: space-between;
-
-            a {
-                font-family: Work Sans;
-                font-style: normal;
-                font-weight: 500;
-                font-size: 16px;
-                line-height: 12px;
-
-                &.cta-newsletter {
-                    width: 150px;
-                    height: 50px;
-                    line-height: 50px;
-                    background-color: $creme;
-                    color: $violet;
-
-                    &:hover {
-                        background-color: $canari;
-                        border-color: $canari;
-                        color: $violet;
-                    }
-                }
-            }
         }
 
         &.nav-2 {
@@ -68,9 +65,25 @@ header {
                 object-fit: contain;
                 &.burger {
                     width: 33px;
+                    &:hover {
+                        cursor: pointer;
+                        stroke: $canari;
+                    }
                 }
                 &.close {
                     width: 18px;
+                    transition: .8s ease;
+                    &:hover {
+                        cursor: pointer;
+                    }
+                    &.close-off {
+                        pointer-events: none;
+                        opacity: 0;
+                    }
+                    &.close-on {
+                        pointer-events: auto;
+                        opacity: 1;
+                    }
                 }
             }
         }

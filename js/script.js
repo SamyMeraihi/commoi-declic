@@ -1,15 +1,3 @@
-//Animation menu burger
-//let burger = document.querySelector(".burger-off");
-
-
-/*
-burger.onclick = function () {
-  this.classList.toggle("burger-off");
-  this.classList.toggle("burger-on");
-  document.querySelector(".dropdown").classList.toggle("dropdown-on");
-}
-*/
-
 function scrollToTarget(ID, offsetValue) {
 
   if (offsetValue === undefined) { offsetValue = 0 }
@@ -27,6 +15,20 @@ function scrollToTarget(ID, offsetValue) {
   $('html, body').stop().animate({
     scrollTop: $("#" + ID).offset().top + offsetValue
   }, speed);
-
+  $(".dropdown").removeClass("dropdown-on");
+  $(".close").removeClass("close-on");
   return false
+}
+
+//Animation menu burger
+let burger = document.querySelector(".burger");
+burger.onclick = function () {
+    this.classList.toggle("burger-on");
+    document.querySelector(".dropdown").classList.toggle("dropdown-on");
+    document.querySelector(".close").classList.toggle("close-on");
+}
+let croix = document.querySelector(".close");
+croix.onclick = function () {
+    this.classList.toggle("close-on");
+    document.querySelector(".dropdown").classList.toggle("dropdown-on");
 }

@@ -102,6 +102,7 @@ a {
 }
 //styles du bloc main
 main {
+    overflow-x: hidden;
     position: relative;
     z-index: 2;
     padding: 0 0 100px 0;
@@ -453,7 +454,8 @@ main {
 
                 form {
                     margin-top: 30px;
-                    width: 545px;
+                    width: 100%;
+                    max-width: 545px;
                     input {
                         height: 77px;
                         margin: 0;

@@ -34,7 +34,9 @@
                     width: 300px;
                     top: -8%;
                 }
-
+                .valeurs {
+                    margin-top: 120px;
+                }
                 #avantages {
                     div {
                         align-self: start;
@@ -54,15 +56,16 @@
 
                         .d-flex {
                             margin-left: 0px;
+                            padding: 0 20px;
 
                             h2 {
-                                margin-bottom: 0px;
+                                margin-bottom: 15px;
                             }
 
                             .sous-titre {
-                                margin-top: 7px;
+                                margin-top: 0px;
                                 width: 100%;
-                                max-width: 265px;
+                                margin-bottom:15px;
                             }
 
                             p {
@@ -230,6 +233,10 @@
 
                 #video {
                     margin-top: 0px;
+                    iframe {
+                        width: 100%;
+                        max-height: 720px;
+                    }
                 }
 
                 .illustration-flottante-2 {
@@ -324,6 +331,16 @@
                         bottom: 1600px;
                     }
                 }
+                #formulaire {
+                    form {
+                        padding: 0 20px;
+                        input {
+                            &#mc-embedded-subscribe {
+                                width: 150px;
+                            }
+                        }
+                    }
+                }
             }
         }
     }
@@ -340,6 +357,11 @@
     }
 
     main {
+        #rejoindre {
+            h1 {
+                max-width: 300px;
+            }
+        }
         .main-item {
             &.first {
                 .etablissement {
@@ -390,6 +412,34 @@
                     width: 250px;
                     top: -8%;
                 }
+                .instagram {
+                    p {
+                        padding: 0 20px;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-height: 799.98px) {
+    main {
+        #rejoindre {
+            height: 110vh;
+            padding-top: 40vh;
+            .illustration-flottante {
+                display:none;
+            }
+        }
+    }
+}
+@media (max-height: 499.98px) {
+    main {
+        #rejoindre {
+            height: 110vh;
+            padding-top: 30vh;
+            .more {
+                margin-top: 30px;
             }
         }
     }

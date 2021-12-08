@@ -29,7 +29,6 @@
         gtag('config', 'G-X3YHM63MPV');
     </script>
     <!-- scripts js -->
-    <script type="text/javascript" src="js/script.js"></script>
 </head>
 
 <body>
@@ -44,8 +43,7 @@
                 <ul>
                     <li><a onClick="return scrollToTarget('avantages', -460)" href="#">Pour les lycéens</a></li>
                     <li><a onClick="return scrollToTarget('video', -300)" href="#">L'entrepreneuriat</a></li>
-                    <li><a onClick="return scrollToTarget('etablissement', 100)" href="#">Pour les établissements</a>
-                    </li>
+                    <li><a onClick="return scrollToTarget('etablissement', 100)" href="#">Pour les établissements</a></li>
                 </ul>
                 <a onClick="return scrollToTarget('formulaire', -200)" class="cta cta-newsletter"
                     href="#">Newsletter</a>
@@ -53,29 +51,16 @@
         </nav>
         <nav class="nav-2 d-flex">
             <img class="burger" src="img/menu_burger.svg">
-            <!--
-            <svg class="burger burger-off">
-                <rect />
-                <rect />
-                <rect />
-            </svg>
-            -->
             <a href="#" class="nav-logo"><img alt="logo de Déclic" src="img/logo-declic.png"></a>
-            <img class="close" src="img/croix.svg">
-            <!--
-            <svg class="arrow">
-                <rect x="2" y="6" />
-                <rect x="23" y="7" />
-
-            </svg>
-        -->
+            <img class="close close-off" src="img/croix.svg">
         </nav>
         <div class="dropdown d-flex flex-column">
             <ul class="d-flex flex-column">
-                <li><a href="#">Pour les étudiants</a></li>
-                <li><a href="#">Pour les lycées</a></li>
+                <li><a onClick="return scrollToTarget('avantages', -460)" href="#">Pour les lycéens</a></li>
+                <li><a onClick="return scrollToTarget('video', -300)" href="#">L'entrepreneuriat</a></li>
+                <li><a onClick="return scrollToTarget('etablissement', 100)" href="#">Pour les établissements</a></li>
             </ul>
-            <a class="cta-newsletter" href="#">Newsletter</a>
+            <a class="cta cta-newsletter" href="#">Newsletter</a>
         </div>
 
     </header>
@@ -155,12 +140,11 @@
                 </section>
 
                 <div id="video">
-                    <!--<iframe width="1280" height="720" src="https://www.youtube.com/embed/4qCQTdkePWo"
+                    <iframe width="1280" height="720" src="https://www.youtube.com/embed/4qCQTdkePWo"
                         title="YouTube video player" frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen></iframe>-->
-                    <img alt="image d’un player vidéo avec une photo de lycéens en image de prévisualisation"
-                        src="img/video-preview-maquette-fullvisuel.png">
+                        allowfullscreen>
+                    </iframe>
 
                 </div>
 
@@ -254,6 +238,8 @@
         <p class="copyright">© 2021 com'moi - tous droits réservés</p>
     </footer>
     </div>
+    <script type="text/javascript" src="js/script.js"></script>
+
 </body>
 
 </html>
