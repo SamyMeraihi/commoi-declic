@@ -1,6 +1,6 @@
 header {
-    height: 900px;
     background-color: $creme;
+
     .dropdown {
         position: fixed;
         top: -50px;
@@ -11,147 +11,114 @@ header {
         width: 100vw;
         height: 100vh;
         transition: 0.8s ease;
+
         &.dropdown-on {
             position: fixed;
             z-index: 98;
             top: 0;
             opacity: 1;
         }
+
         ul {
             li {
                 margin: 0 0 20px 0;
             }
         }
     }
-    .illustration-flottante {
-        position: absolute;
-        width: 350px;
-        top: 10%;
-        left: 30%;
-    }
+
     nav {
         width: 100%;
-        height: 90px;
+        height: 100px;
         position: fixed;
         z-index: 99;
         background-color: $creme;
+
         &.nav-1 {
             padding: 0 80px;
             justify-content: space-between;
-        }
-        &.nav-2 {
-            display: none;
-            justify-content: space-between;
-            padding: 0 10%;
-            svg {
-                position: relative;
-                width: 40px;
-                height: 30px;
-                rect {
-                    width: 33px;
-                    height: 4px;
-                    fill: $violet;
-                    x: 3.5;
-                    rx: 3px;
-                    ry: 3px;
-                    transition: 0.5s ease;
-                    transform-origin: center;
-                }
-                &.burger-off {
-                    rect {
-                        width: 33px;
-                        height: 4px;
-                        &:nth-child(1) {
-                            y: 7;
-                        }
-                        &:nth-child(2) {
-                            y: 13;
-                        }
-                        &:nth-child(3) {
-                            y: 19;
-                        }
-                    }
-                }
-                &.burger-on {
-                    rect {
-                        width: 33px;
-                        height: 4px;
-                        &:nth-child(1) {
-                            x: 10;
-                            y: 15;
-                            width: 18px;
-                            transform: rotate(45deg);
-                        }
-                        &:nth-child(2) {
-                            y: 13;
-                            opacity: 0;
-                        }
-                        &:nth-child(3) {
-                            width: 18px;
-                            x: 09;
-                            y: 12;
-                            transform: rotate(-45deg);
-                        }
-                    }
-                }
-                &.arrow {
-                    rect {
-                        width: 14px;
-                        height: 3px;
-                        fill: #61269e;
-                        y: 6;
-                        rx: 2px;
-                        ry: 2px;
-                        transition: 0.5s ease;
-                        &:nth-child(1) {
-                            x: 11;
-                            y: 11;
-                            transform: rotate(-45deg);
-                        }
-                        &:nth-child(2) {
-                            x: 16;
-                            y: 10;
-                            transform: rotate(45deg);
-                        }
-                    }
-                }
-                &:hover {
-                    cursor: pointer;
-                    rect {
-                        fill: $canari;
-                    }
-                }
-            }
-        }
-        .nav-logo {
-            height: 100%;
-            padding: 20px 0;
-            img {
-                height: inherit;
-            }
-        }
-        ul {
-            display: flex;
-            li {
-                margin-right: 40px;
-                a {
-                    color: $noir;
+
+            a {
+                font-family: Work Sans;
+                font-style: normal;
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 12px;
+
+                &.cta-newsletter {
+                    width: 150px;
+                    height: 50px;
+                    line-height: 50px;
+                    background-color: $creme;
+                    color: $violet;
+
                     &:hover {
+                        background-color: $canari;
+                        border-color: $canari;
                         color: $violet;
                     }
                 }
             }
         }
-    }
-    .header-bg {
-        padding: 0 50px 250px 40px;
-        justify-content: flex-end;
-        height: 100%;
-        position: relative;
-        z-index: 2;
-        .more {
-            margin-top: 50px;
-            font-style: italic;
+
+        &.nav-2 {
+            display: none;
+            justify-content: space-between;
+            padding: 0 10%;
+            img {
+                object-fit: contain;
+                &.burger {
+                    width: 33px;
+                }
+                &.close {
+                    width: 18px;
+                }
+            }
+        }
+
+        .nav-logo {
+            height: 100%;
+            padding: 30px 0;
+
+            img {
+                height: 50px;
+            }
+        }
+
+        ul {
+            display: flex;
+
+            li {
+                margin-right: 40px;
+
+                a {
+                    color: $noir;
+                    position: relative;
+
+                    &:after {
+                        content: "";
+                        display: block;
+                        position: absolute;
+                        right: 0;
+                        margin-top: 5px;
+                        height: 2px;
+                        width: 0px;
+                        opacity: 0;
+                        background-color: $violet;
+                        transition: 0.4s ease;
+                    }
+                }
+
+                &:hover {
+                    a {
+                        color: $violet;
+
+                        &:after {
+                            width: 40px;
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
         }
     }
 }

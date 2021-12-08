@@ -1,34 +1,24 @@
 footer {
-    height: 400px;
-    margin-top: 50px;
-    background-color: $violet;
+    margin-top: 83px;
     position: relative;
-    z-index: 3;
+    background-color: $violet;
     color: $blanc;
     justify-content: flex-end;
-    &:before {
-        content: "";
-        display: block;
-        width: 100%;
-        height: 150px;
+
+    .vague {
         position: absolute;
-        top: -149px;
-        background-image: url("../img/forme-module-3-horizontale-footer.svg");
-        background-size: 120%;
-        background-position-x: center;
-        background-repeat: no-repeat;
+        z-index: -1;
+        bottom: 0px;
+        width: 1440px;
     }
+
     .footer-content {
         max-width: 720px;
         margin: auto;
+        padding: 0 0 60px 0;
         align-items: flex-start;
         justify-content: space-between;
         section {
-            h2 {
-                margin-top: 0;
-                color: $canari;
-                font-size: 1.5rem;
-            }
             ul {
                 line-height: 2rem;
                 padding: 0 40px 0 0;
@@ -37,24 +27,9 @@ footer {
                     align-items: flex-start;
                     a {
                         transition: 0.5s ease;
-                        &:after {
-                            content: "";
-                            display: block;
-                            height: 1px;
-                            width: 50px;
-                            opacity: 0;
-                            background-color: $mauve;
-                            transition: 0.5s ease;
-                        }
                     }
                     &:hover {
                         color: $canari;
-                        a {
-                            &:after {
-                                width: 100%;
-                                opacity: 1;
-                            }
-                        }
                     }
                 }
                 li:not(:last-child) {
@@ -104,6 +79,10 @@ footer {
                         }
                         img {
                             width: 30px;
+                        }
+                        &:hover {
+                            filter: brightness(0) saturate(100%) invert(73%) sepia(17%) saturate(1639%)
+                                hue-rotate(358deg) brightness(102%) contrast(101%);
                         }
                     }
                 }
