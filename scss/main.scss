@@ -150,9 +150,36 @@ main {
         }
     }
     .main-item {
-        max-width: 1440px;
-        margin: auto;
+        width: 100%;
         &.first {
+            position: relative;
+            &:before {
+                content: "";
+                display: block;
+                width: 100%;
+                height: 500px;
+                position: absolute;
+                z-index: 0;
+                top: -199px;
+                background-image: url("../img/forme-module-3-horizontale.svg");
+                background-size: 120%;
+                background-position-x: center;
+                background-repeat: no-repeat;
+            }
+            &:after {
+                content: "";
+                display: block;
+                width: 100%;
+                height: 500px;
+                position: absolute;
+                z-index: 0;
+                top: 100px;
+                background-image: url("../img/forme-module-3-horizontale.svg");
+                background-position: bottom;
+                background-size: 120%;
+                background-position-x: center;
+                background-repeat: no-repeat;
+            }
             #video {
                 margin-top: 200px;
                 text-align: center;
@@ -161,8 +188,9 @@ main {
                     box-shadow: 0px 0px 10px 0px $mauve;
                 }
             }
-
             #avantages {
+                max-width: 1440px;
+                margin: auto;
                 position: relative;
                 flex-wrap: wrap;
                 align-items: flex-start;

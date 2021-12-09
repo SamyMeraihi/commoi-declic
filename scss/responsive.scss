@@ -1,4 +1,12 @@
 // Ecrans larges (desktops, en-dessous de 1440px)
+@media (min-width: 2099.98px) {
+    footer {
+        &:before {
+            height: 200px;
+            top: -199px;
+        }
+    }
+}
 @media (max-width: 1439.98) {
     main {
         .main-item {
@@ -30,6 +38,10 @@
 
         .main-item {
             &.first {
+                &:before {
+                    background-size: 200%;
+                    background-position-x: -400px;
+                }
                 .illustration-flottante {
                     width: 300px;
                     top: -8%;
@@ -150,6 +162,9 @@
     main {
         .main-item {
             &.first {
+                &:after{
+                    background-size: 200%;
+                }
                 #etablissement {
                     .illustration-flottante {
                         &.perso1, &.perso2 {
@@ -288,12 +303,36 @@
             padding-bottom: 300px;
         }
     }
+    main {
+        .main-item {
+            &.first {
+                &:before {
+                    background-size: 400%;
+                    background-position-x: -650px;
+                    top: -275px;
+                }
+                &:after {
+                    height: 700px;
+                    background-size: 400%;
+                }
+            }
+        }
+    }
 }
 
 @media (max-width: 588.98px) {
     main {
         .main-item {
             &.first {
+                &:before {
+                    background-size: 400%;
+                    background-position-x: -500px;
+                    top: -250px;
+                }
+                &:after {
+                    height: 700px;
+                    background-size: 400%;
+                }
                 .illustration-flottante {
                     top: -9%;
                     right: -10%;
@@ -393,6 +432,14 @@
     main {
         .main-item {
             &.first {
+                &:before {
+                    background-size: 500%;
+                    background-position-x: -425px;
+                    top: -200px;
+                }
+                &:after {
+                    top: 0px;
+                }
                 .illustration-flottante {
                     width: 250px;
                     top: -8%;
@@ -410,8 +457,35 @@
         }
     }
 }
+@media (max-width: 399.98px) {
+    main {
+        .main-item {
+            &.first {
+                &:before {
+                    top: -190px;
+                }
+            }
+        }
+    }
+}
+@media (max-height: 820.98px) {
+    main {
+        .main-item {
+            &.first {
+                &:before {
+                    top: -200px;
+                }
+            }
+        }
+    }
+}
 @media (max-height: 720.98px) {
     main {
+        .main-item {
+            &.first {
+                margin-top: 120px;
+            }
+        }
         #rejoindre {
             padding-top: 40vh;
             .illustration-flottante {
@@ -420,13 +494,26 @@
         }
     }
 }
-@media (max-height: 499.98px) {
+@media (max-height: 599.98px){
     main {
-        #rejoindre {
-            height: 110vh;
-            padding-top: 30vh;
-            .more {
-                margin-top: 30px;
+        .main-item {
+            &.first {
+                margin-top: 100px;;
+                &:before {
+                    
+                }
+            }
+        }
+    }
+}
+@media (max-height: 599.98px) and (max-width: 766.98px) {
+    main {
+        .main-item {
+            &.first {
+                &:before {
+                    background-position-x: -700px;
+                    top: -175px;
+                }
             }
         }
     }
