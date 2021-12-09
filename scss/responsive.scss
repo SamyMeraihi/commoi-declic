@@ -158,7 +158,6 @@
             top: 20%;
         }
     }
-
     main {
         .main-item {
             &.first {
@@ -182,7 +181,7 @@
                         }
                     }
                     h2 {
-                        margin-top: 250px;
+                        margin-top: 150px;
                     }
                 }
             }
@@ -498,10 +497,7 @@
     main {
         .main-item {
             &.first {
-                margin-top: 100px;;
-                &:before {
-                    
-                }
+                margin-top: 100px;
             }
         }
     }
