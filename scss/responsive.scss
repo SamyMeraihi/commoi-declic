@@ -1,4 +1,4 @@
-// Ecrans larges (desktops, en-dessous de 1440px)
+// Ecrans très larges (desktops, en-dessous de 2099px)
 @media (min-width: 2099.98px) {
     footer {
         &:before {
@@ -7,6 +7,7 @@
         }
     }
 }
+// Ecrans larges (desktops, en-dessous de 1440px)
 @media (max-width: 1439.98) {
     main {
         .main-item {
@@ -77,7 +78,7 @@
                             .sous-titre {
                                 margin-top: 0px;
                                 width: 100%;
-                                margin-bottom:15px;
+                                margin-bottom: 15px;
                             }
 
                             p {
@@ -161,12 +162,13 @@
     main {
         .main-item {
             &.first {
-                &:after{
+                &:after {
                     background-size: 200%;
                 }
                 #etablissement {
                     .illustration-flottante {
-                        &.perso1, &.perso2 {
+                        &.perso1,
+                        &.perso2 {
                             display: none;
                         }
                         &.forme1 {
@@ -488,12 +490,12 @@
         #rejoindre {
             padding-top: 40vh;
             .illustration-flottante {
-                display:none;
+                display: none;
             }
         }
     }
 }
-@media (max-height: 599.98px){
+@media (max-height: 599.98px) {
     main {
         .main-item {
             &.first {
