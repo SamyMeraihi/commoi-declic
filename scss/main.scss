@@ -181,7 +181,7 @@ main {
                 background-repeat: no-repeat;
             }
             #video {
-                margin-top: 200px;
+                margin-top: 220px;
                 text-align: center;
                 iframe {
                     border-radius: 15px;
@@ -362,6 +362,7 @@ main {
                     position: absolute;
 
                     &.perso1 {
+                        z-index: -1;
                         transform: rotate(10.58deg);
                         width: 373px;
                         height: 428px;
@@ -396,7 +397,7 @@ main {
                 }
                 h2 {
                     max-width: 700px;
-                    margin-top: 550px;
+                    margin-top: 150px;
                     margin-bottom: 0px;
                     font-family: Quicksand;
                     font-style: normal;
