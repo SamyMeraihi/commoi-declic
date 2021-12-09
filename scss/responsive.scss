@@ -92,6 +92,9 @@
                         }
                     }
                 }
+                #etablissement {
+                    padding: 0 40px;
+                }
             }
         }
     }
@@ -147,48 +150,14 @@
     main {
         .main-item {
             &.first {
-                .avantages {
-                    padding: 0 10%;
-                    align-items: center;
-
-                    &:before {
-                        height: 100%;
-                        background-size: 200%;
-                    }
-
-                    &:after {
-                        height: 100%;
-                        background-size: 200%;
-                        bottom: 150px;
-                    }
-
-                    img {
-                        order: 2;
-                        width: 100%;
-                        max-width: 500px;
-                        margin: 0;
-                    }
-
-                    div {
-                        order: 1;
-                        width: 100%;
-                        max-width: 500px;
-                        margin-bottom: 80px;
-                        align-items: center;
-
-                        .titre {
-                            width: 100%;
-                            text-align: left;
+                #etablissement {
+                    .illustration-flottante {
+                        &.perso1, &.perso2 {
+                            display: none
                         }
-
-                        span {
-                            display: inline-block;
-                            width: 100%;
-                        }
-
-                        a {
-                            text-align: center;
-                        }
+                    }
+                    h2 {
+                        
                     }
                 }
             }
@@ -334,11 +303,7 @@
                 #formulaire {
                     form {
                         padding: 0 20px;
-                        input {
-                            &#mc-embedded-subscribe {
-                                width: 150px;
-                            }
-                        }
+                        transform: scale(0.9);
                     }
                 }
             }
@@ -418,11 +383,14 @@
                         text-align: center;
                     }
                 }
+                #etablissement {
+                    padding: 0 20px;
+                }
             }
         }
     }
 }
-@media (max-height: 799.98px) {
+@media (max-height: 699.98px) {
     main {
         #rejoindre {
             height: 110vh;

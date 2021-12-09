@@ -422,14 +422,15 @@ main {
                     font-size: 28px;
                     line-height: 35px;
                     text-align: center;
+                    width: 100%;
                     &:first-of-type {
-                        width: 392px;
+                        max-width: 392px;
                         height: 35px;
                         margin-top: 0px;
                         margin-bottom: 0px;
                     }
                     &:last-of-type {
-                        width: 205px;
+                        max-width: 205px;
                         height: 35px;
                         margin-top: 51px;
                         margin-bottom: 0px;
