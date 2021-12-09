@@ -1,24 +1,22 @@
 footer {
     overflow-x: clip;
-    margin-top: 83px;
+    margin-top: 50px;
     position: relative;
-    background-color: $violet;
-    color: $blanc;
     justify-content: flex-end;
 
-    .vague {
-        position: absolute;
-        z-index: -1;
-        bottom: 0px;
-        width: 1440px;
+    .purpleWaveFooter {
+        margin-bottom: -1px;
     }
 
     .footer-content {
-        max-width: 720px;
         margin: auto;
-        padding: 0 0 60px 0;
+        padding: 0 25vw 60px 25vw;
         align-items: flex-start;
         justify-content: space-between;
+        width: 100%;
+        color: $blanc;
+        background-color: $violet;
+
         section {
             ul {
                 line-height: 2rem;
@@ -99,5 +97,6 @@ footer {
         text-align: center;
         font-size: 1rem;
         color: $blanc;
+        background-color: $violet;
     }
 }

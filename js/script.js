@@ -8,10 +8,6 @@ function scrollToTarget(ID, offsetValue) {
 
   if (speed < 1000) { speed = 1000 }
 
-  console.log("Distance : " + distance)
-  console.log("Ration :" + ratio)
-  console.log("Vitesse : " + (speed / 1000))
-
   $('html, body').stop().animate({
     scrollTop: $("#" + ID).offset().top + offsetValue
   }, speed);
@@ -31,4 +27,9 @@ let croix = document.querySelector(".close");
 croix.onclick = function () {
   this.classList.toggle("close-on");
   document.querySelector(".dropdown").classList.toggle("dropdown-on");
+}
+
+// Consentement des cookies
+function CookieConsent(ID) {
+  $("#cookie").css('display', 'none');
 }

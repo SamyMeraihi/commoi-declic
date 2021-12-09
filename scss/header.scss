@@ -1,5 +1,75 @@
 header {
     background-color: $creme;
+
+    #cookie {
+        //display: none;
+        background-color: $violet;
+        position: fixed;
+        z-index: 3;
+        text-align: center;
+        right: 10px;
+        left: 10px;
+        bottom: 10px;
+        padding-left: 25px;
+        padding-right: 25px;
+
+        border-radius: 15px;
+        border: 2px solid $canari;
+        box-shadow: 0px 0px 10px 0px $canari;
+
+        .title-wrap {
+            margin-top: 10px;
+            h4 {
+                margin: 0px;
+                font-family: "Quicksand", sans-serif;
+                font-weight: 700;
+                font-size: 20px;
+                line-height: 38px;
+                color: $canari;
+            }
+        }
+
+        .msg-wrap {
+            margin-top: 10px;
+            p {
+                font-family: "Work Sans", sans-serif;
+                font-size: 17px;
+                line-height: 19px;
+                font-weight: 300;
+                margin: 0px;
+                color: $blanc;
+            }
+        }
+
+        .btn-wrap {
+            margin-top: 10px;
+            margin-bottom: 20px;
+
+            button {
+                transition: 0.4s ease;
+                height: 50px;
+                width: 150px;
+                line-height: 45px;
+                text-align: center;
+                border: 1px solid $canari;
+                border-radius: 40px;
+                color: $canari;
+                font-size: 18px;
+                font-weight: 700;
+                background-color: $violet;
+
+                margin-left: 10px;
+                margin-right: 10px;
+                margin-top: 10px;
+
+                &:hover {
+                    color: $violet;
+                    background-color: $canari;
+                }
+            }
+        }
+    }
+
     a {
         font-family: Work Sans;
         font-style: normal;
@@ -29,7 +99,7 @@ header {
         background: $creme;
         width: 100vw;
         height: 100vh;
-        transition: .8s ease;
+        transition: 0.8s ease;
 
         &.dropdown-on {
             position: fixed;
@@ -72,7 +142,7 @@ header {
                 }
                 &.close {
                     width: 18px;
-                    transition: .8s ease;
+                    transition: 0.8s ease;
                     &:hover {
                         cursor: pointer;
                     }

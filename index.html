@@ -35,13 +35,35 @@
 
     <!-- header -->
     <header>
+
+
+        <!-- Cookies -->
+        <div id="cookie">
+            <div id="closeIcon">
+            </div>
+            <div class="title-wrap">
+                <h4>Consentement aux cookies</h4>
+            </div>
+            <div class="content-wrap">
+                <div class="msg-wrap">
+                    <p> En poursuivant ta navigation sur notre site, tu acceptes qu'on récolte tes statistiques de
+                        fréquentation et de navigation pour améliorer ton expérience !</p>
+                    <div class="btn-wrap">
+                        <button onclick="CookieConsent(1);">J'accepte</button>
+                        <button onclick="CookieConsent(-1);">Je refuse</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
         <nav class="nav-1 d-flex space-between">
             <a onClick="return scrollToTarget('rejoindre')" href="#" class="nav-logo"><img alt="logo de Déclic"
                     src="img/logo-declic.png"></a>
             <!-- <p class="demo-logo">Logo</p> -->
             <div class="d-flex">
                 <ul>
-                    <li><a onClick="return scrollToTarget('avantages', -460)" href="#">Pour les lycéens</a></li>
+                    <li><a onClick="return scrollToTarget('avantages', -300)" href="#">Pour les lycéens</a></li>
                     <li><a onClick="return scrollToTarget('valeurs', -150)" href="#">L'entrepreneuriat</a></li>
                     <li><a onClick="return scrollToTarget('etablissement', 100)" href="#">Pour les établissements</a>
                     </li>
@@ -98,7 +120,8 @@
                             <p>Taffer c'est pas juste gratter du papier, c'est aussi avoir ton propre plan et kiffer.
                                 Rejoins
                                 Déclic pour savoir comment y arriver !</p>
-                            <a class="cta cta-violet" href="#">S'informer</a>
+                            <a class="cta cta-violet" href="https://linktr.ee/declic.apef"
+                                target="_blank">S'informer</a>
                         </div>
                     </div>
                 </section>
@@ -142,7 +165,7 @@
                 </section>
 
                 <div id="video">
-                    <iframe width="776" height="437" src="https://www.youtube.com/embed/USJvBbItWpo"
+                    <iframe width="1280" height="720" src="https://www.youtube.com/embed/xIM7i3txXnQ"
                         title="YouTube video player" frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                         allowfullscreen></iframe>
@@ -197,8 +220,9 @@
 
     <!-- footer -->
     <footer class="d-flex flex-column">
-        <img alt="forme de vague violette qui traverse l’écran et représente le fond violet du bas de page"
-            src="img/purple-wave-2.svg" class="vague">
+
+        <img class="purpleWaveFooter" src="img/formefooter.svg">
+
         <div class="footer-content d-flex">
             <section class="footer-information">
                 <h2 class="titre titre-footer">Informations</h2>
