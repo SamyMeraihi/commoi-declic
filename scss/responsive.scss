@@ -153,11 +153,21 @@
                 #etablissement {
                     .illustration-flottante {
                         &.perso1, &.perso2 {
-                            display: none
+                            display: none;
+                        }
+                        &.forme1 {
+                            -webkit-transform: scaleY(-1);
+                            transform: rotate(15deg) scaleY(-1);
+                            top: -250px;
+                            left: -500px;
+                        }
+                        &.forme2 {
+                            top: -450px;
+                            right: -200px;
                         }
                     }
                     h2 {
-                        
+                        margin-top: 250px;
                     }
                 }
             }
@@ -172,7 +182,13 @@
         .main-item {
             &.first {
                 margin-bottom: 100px;
-
+                #etablissement {
+                    .illustration-flottante {
+                        &.forme1 {
+                            left: -600px;
+                        }
+                    }
+                }
                 .valeurs {
                     .valeurs-cartes {
                         flex-direction: column;
@@ -203,6 +219,7 @@
                 #video {
                     margin-top: 0px;
                     iframe {
+                        border-radius: 0;
                         width: 100%;
                         max-height: 720px;
                     }
@@ -271,9 +288,6 @@
             padding-bottom: 300px;
         }
     }
-
-    main {
-    }
 }
 
 @media (max-width: 588.98px) {
@@ -293,7 +307,13 @@
                         }
                     }
                 }
-
+                #etablissement {
+                    .illustration-flottante {
+                        &.forme1 {
+                            left: -700px;
+                        }
+                    }
+                }
                 .illustration-flottante-2 {
                     &:nth-child(5) {
                         right: -200px;
@@ -390,10 +410,9 @@
         }
     }
 }
-@media (max-height: 699.98px) {
+@media (max-height: 720.98px) {
     main {
         #rejoindre {
-            height: 110vh;
             padding-top: 40vh;
             .illustration-flottante {
                 display:none;
