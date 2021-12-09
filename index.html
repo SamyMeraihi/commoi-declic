@@ -42,8 +42,9 @@
             <div class="d-flex">
                 <ul>
                     <li><a onClick="return scrollToTarget('avantages', -460)" href="#">Pour les lycéens</a></li>
-                    <li><a onClick="return scrollToTarget('video', -300)" href="#">L'entrepreneuriat</a></li>
-                    <li><a onClick="return scrollToTarget('etablissement', 100)" href="#">Pour les établissements</a></li>
+                    <li><a onClick="return scrollToTarget('valeurs', -150)" href="#">L'entrepreneuriat</a></li>
+                    <li><a onClick="return scrollToTarget('etablissement', 100)" href="#">Pour les établissements</a>
+                    </li>
                 </ul>
                 <a onClick="return scrollToTarget('formulaire', -200)" class="cta cta-newsletter"
                     href="#">Newsletter</a>
@@ -51,16 +52,17 @@
         </nav>
         <nav class="nav-2 d-flex">
             <img class="burger" src="img/menu_burger.svg">
-            <a href="#" class="nav-logo"><img alt="logo de Déclic" src="img/logo-declic.png"></a>
+            <a onClick="return scrollToTarget('rejoindre')" href="#" class="nav-logo"><img alt="logo de Déclic"
+                    src="img/logo-declic.png"></a>
             <img class="close close-off" src="img/croix.svg">
         </nav>
         <div class="dropdown d-flex flex-column">
             <ul class="d-flex flex-column">
                 <li><a onClick="return scrollToTarget('avantages', -460)" href="#">Pour les lycéens</a></li>
-                <li><a onClick="return scrollToTarget('video', -300)" href="#">L'entrepreneuriat</a></li>
+                <li><a onClick="return scrollToTarget('valeurs', -150)" href="#">L'entrepreneuriat</a></li>
                 <li><a onClick="return scrollToTarget('etablissement', 100)" href="#">Pour les établissements</a></li>
             </ul>
-            <a class="cta cta-newsletter" href="#">Newsletter</a>
+            <a onClick="return scrollToTarget('formulaire', -200)" class="cta cta-newsletter" href="#">Newsletter</a>
         </div>
 
     </header>
@@ -100,7 +102,7 @@
                         </div>
                     </div>
                 </section>
-                <section class="valeurs d-flex flex-column">
+                <section id="valeurs" class="valeurs d-flex flex-column">
                     <h2 class="titre titre-violet">On a quoi de plus&nbsp;?</h2>
                     <div class="valeurs-cartes d-flex">
                         <section class="information d-flex flex-column">
@@ -140,8 +142,10 @@
                 </section>
 
                 <div id="video">
-                    <iframe width="776" height="437" src="https://www.youtube.com/embed/USJvBbItWpo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
+                    <iframe width="776" height="437" src="https://www.youtube.com/embed/USJvBbItWpo"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
                 </div>
 
                 <section id="etablissement" class="d-flex flex-column">

@@ -23,12 +23,12 @@ function scrollToTarget(ID, offsetValue) {
 //Animation menu burger
 let burger = document.querySelector(".burger");
 burger.onclick = function () {
-    this.classList.toggle("burger-on");
-    document.querySelector(".dropdown").classList.toggle("dropdown-on");
-    document.querySelector(".close").classList.toggle("close-on");
+  this.classList.toggle("burger-on");
+  document.querySelector(".dropdown").classList.toggle("dropdown-on");
+  document.querySelector(".close").classList.toggle("close-on");
 }
 let croix = document.querySelector(".close");
 croix.onclick = function () {
-    this.classList.toggle("close-on");
-    document.querySelector(".dropdown").classList.toggle("dropdown-on");
+  this.classList.toggle("close-on");
+  document.querySelector(".dropdown").classList.toggle("dropdown-on");
 }
