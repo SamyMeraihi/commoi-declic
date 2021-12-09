@@ -26,11 +26,16 @@ header {
         opacity: 0;
         left: 0;
         z-index: -1;
-        background: $creme;
+        background: $mauve;
         width: 100vw;
         height: 100vh;
         transition: .8s ease;
-
+        .cta {
+            border: none;
+            &:hover {
+                background: $blanc;
+            }
+        }
         &.dropdown-on {
             position: fixed;
             z-index: 98;
@@ -51,7 +56,10 @@ header {
         position: fixed;
         z-index: 99;
         background-color: $creme;
-
+        transition: .4s ease;
+        &.nav-hidden {
+            transform: translateY(-100%);
+        }
         &.nav-1 {
             padding: 0 80px;
             justify-content: space-between;

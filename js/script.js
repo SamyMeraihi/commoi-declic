@@ -32,3 +32,13 @@ croix.onclick = function () {
   this.classList.toggle("close-on");
   document.querySelector(".dropdown").classList.toggle("dropdown-on");
 }
+
+let prev = 0;
+let $window = $(window);
+let nav = $('nav');
+
+$window.on('scroll', function(){
+  let scrollTop = $window.scrollTop();
+  nav.toggleClass('nav-hidden', scrollTop > prev);
+  prev = scrollTop;
+});
